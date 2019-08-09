@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Welcome from './welcome';
+import App from './app';
 
-ReactDOM.render(
-    <HelloWorld />,
-    document.querySelector('main')
-);
+let elem;
 
-function HelloWorld() {
-    return (
-        <div>Hello, World!</div>
+if(location.pathname == '/welcome') {
+    //loggedout
+    elem = <Welcome />;
+} else {
+    //loggedin
+    elem = (
+        <App />
     );
 }
+
+ReactDOM.render(
+    elem,
+    document.querySelector('main')
+);
