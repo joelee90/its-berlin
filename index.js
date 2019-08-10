@@ -74,6 +74,7 @@ app.post('/form', async (req, res) => {
             info.phonenumber,
             hash);
         console.log("regi", regi);
+        req.session.userId = regi.rows[0].id;
         res.json({ registration : true });
     } catch(err) {
         res.json({ registration : false });

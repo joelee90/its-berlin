@@ -5,13 +5,18 @@ import axios from './axios';
 
 export default function Form () {
 
-    const { values, handleChange, handleSubmit } = useForm(registration);
+    const { values, handleChange, handleSubmit, error, setError } = useForm(registration);
 
     async function registration() {
-        console.log("values", values);
+        // console.log("values", values);
         try {
             let regi = await axios.post('/form', { values });
             console.log("regi", regi);
+            if(regi.data.registration) {
+                location.replace('/');
+            } else if (values == "") {
+                setError(true);
+            }
         } catch(err) {
             console.log("err in regi client", err);
         }
@@ -21,6 +26,7 @@ export default function Form () {
         <div>
             <div className="regi-container">
                 <form onSubmit = { handleSubmit } >
+                    { error && <div className="error"> Ooops! Something went wrong! </div> }
                     <input className="input" type="text" name="firstname" placeholder="firstname" onChange = { handleChange } value={values.firstname || ''} required />
                     <input className="input" type="text" name="lastname" placeholder="lastname" onChange = { handleChange } value={values.lastname || ''} required />
                     <input className="input" type="email" name="email" placeholder="email" onChange = { handleChange } value={values.email || ''}required />
@@ -35,10 +41,3 @@ export default function Form () {
         </div>
     );
 }
-
-// <input type="text" name="firstname" placeholder="first name" onChange={ handleChange } required />
-// <input type="text" name="lastname" placeholder="last name" onChange={ handleChange } required/>
-// <input type="text" name="email" placeholder="email" onChange={ handleChange } required/>
-// <input type="text" name="phone" placeholder="phone number" onChange={ handleChange } required/>
-// <input type="password"  name="password" placeholder="password" onChange={ handleChange } required/>
-// <button onClick={ submit }>Register</button>
