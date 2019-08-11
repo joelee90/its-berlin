@@ -7,7 +7,7 @@ export default function Login () {
     const { values, handleChange, submit, error, setError } = useForm(logging);
 
     async function logging () {
-        // console.log("values", values);
+        console.log("values", values);
         try {
             let log = await axios.post('/login', { values });
             console.log("log", log.data);

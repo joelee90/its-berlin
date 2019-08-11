@@ -11,7 +11,7 @@ header {
     border: 1px solid black;
 }
 
-.home {
+.map-home {
     display: grid;
     grid-template-columns: 0.4fr 1fr;
 }

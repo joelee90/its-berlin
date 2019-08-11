@@ -19,3 +19,10 @@ exports.checkEmail = function checkEmail(email) {
         `SELECT * FROM users WHERE email = $1 `, [email]
     );
 };
+
+exports.updateBio = function updateBio(bio, id) {
+    return db.query(
+        `UPDATE users SET bio = $1 WHERE id = $2 RETURNING bio`,
+        [bio, id]
+    );
+};

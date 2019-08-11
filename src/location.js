@@ -9,7 +9,7 @@ export default function Location () {
     const parameters = {
         client_id: "PWIYCNRHNU45LQELQCQEJJYEZ4XK5BFEAPBSP2CA0WLBNMDE",
         client_secret: "S4IADFOPXD25YHVQ0CE0Z4Y2R2QCTPSM4S1IL542ZTGFIZGL",
-        query: "coffee",
+        query: "sight",
         near: "Berlin",
         v: '20182507'
     };
@@ -17,10 +17,10 @@ export default function Location () {
     useEffect(()=> {
         axios.get(endPoint + new URLSearchParams(parameters))
             .then(val => {
-                console.log("val", val);
-                console.log("val.data.response.groups[0].items", val.data.response.groups[0].items);
+                // console.log("val", val);
+                // console.log("val.data.response.groups[0].items", val.data.response.groups[0].items);
                 let list = val.data.response.groups[0].items;
-                console.log("list", list);
+                // console.log("list", list);
                 setPosts(list);
             })
             .catch(err => {
@@ -32,7 +32,7 @@ export default function Location () {
         <div>
             <ul>
                 {
-                    posts.map(val => (<li key={val.venue.id}> {val.venue.name} </li>))
+                    posts.map(val => (<li key={val.venue.id}> {val.venue.name}</li>))
                 }
             </ul>
         </div>

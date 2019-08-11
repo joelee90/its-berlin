@@ -1,28 +1,69 @@
-import React from 'react';
-import { HashRouter, Route, Link } from 'react-router-dom';
-import useForm from "./useForm";
-import axios from './axios';
+import React from "react";
+import axios from "./axios";
 
-export default function Profile () {
+export default class Bioeditor extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            editing: false
+        };
+    }
 
-    // const { values, handleChange, handleSubmit, error, setError } = useForm(registration);
+    componentDidMount() {
+        this.setState((state, props) => ({ newBio : props.bio }));
+    }
+    //user's original text is kept before making any changes.
 
-    // async function Profile() {
-    //     // console.log("values", values);
-    //     try {
-    //         let profile = await axios.post('/profile', { values });
-    //         console.log("profile", profile);
-    //     } catch(err) {
-    //         console.log("err in regi client", err);
-    //     }
-    // }
+    handleChange(e) {
+        this.setState({
+            newBio : e.target.value
+        });
+    }
 
-    return (
-        <div>
-            <div className="profile-container">
-                <textarea />
-                <div>PROFILE</div>
+    submit(e) {
+        e.preventDefault();
+        axios.post('/bio', {
+            bio: this.state.newBio
+        })
+            .then(({ data }) => {
+                this.setState({ editing : false });
+                this.props.setBio(data.bio);
+            })
+            .catch(err => {
+                console.log("err in add bio btn", err);
+            });
+    }
+
+    render() {
+        return (
+            <div>
+
+                {this.state.editing && (
+                    <div>
+                        <textarea
+                            value = {this.state.newBio}
+                            name="draftBio"
+                            cols="50"
+                            rows="10"
+                            onChange = {e => this.handleChange(e)}
+                        />
+                        < br/>
+                        <button className="regi-btn" onClick={ e => this.submit(e) }>Save</button>
+                    </div>
+                )}
+
+                {this.props.bio && !this.state.editing && (
+                    <div>
+                        <p>{this.props.bio}</p>
+                        <button className="regi-btn" onClick = {() => this.setState({ editing:true })}> Edit your bio! </button>
+                    </div>
+                )}
+
+                {!this.props.bio && !this.state.editing && (
+                    <button className="regi-btn" onClick = {() => this.setState({ editing:true })}> Add your bio! </button>
+                )}
+
             </div>
-        </div>
-    );
+        );
+    }
 }

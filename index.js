@@ -110,9 +110,16 @@ app.post('/login', async (req, res) => {
 
 //Profile
 app.post('/profile', async (req, res) => {
-    const pro = req.body.values;
-    console.log("pro");
+    const userBio = req.body.bio;
+    // console.log("req.body.bio", req.body.bio);
+    try {
+        await db.updateBio(userBio, req.session.userId);
+        res.json({ userBio });
+    } catch (err) {
+        console.log("err in post profile", err);
+    }
 });
+
 
 app.get('*', function(req, res) {
     if(!req.session.userId) {
