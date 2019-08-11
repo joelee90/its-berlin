@@ -108,6 +108,12 @@ app.post('/login', async (req, res) => {
     }
 });
 
+//Profile
+app.post('/profile', async (req, res) => {
+    const pro = req.body.values;
+    console.log("pro");
+});
+
 app.get('*', function(req, res) {
     if(!req.session.userId) {
         res.redirect('/welcome');

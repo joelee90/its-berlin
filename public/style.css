@@ -6,3 +6,12 @@
     margin: 0;
     padding: 0;
   }
+
+header {
+    border: 1px solid black;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+}
