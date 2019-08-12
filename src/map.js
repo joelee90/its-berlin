@@ -6,6 +6,18 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "reac
 import Location from './location';
 import mapStyles from './mapStyles';
 import Hereapi from './hereapi';
+import StampButton from './stampButton';
+
+// useEffect(() => {
+//     try {
+//         const data = axios.post('/saveFourApi');
+//         console.log('list from when map renders', data);
+//     } catch (err) {
+//         console.log("err", err);
+//     }
+//
+// }, []);
+//trying to save the place_id in the db once.
 
 function Map () {
 
@@ -15,20 +27,19 @@ function Map () {
     let list = useSelector(
         state => state && state.post
     );
-    console.log("list", list);
+    // console.log("list", list);
 
     let apiList = useSelector(
         state => state && state.posthere
     );
-    console.log("apiList", apiList);
+    // console.log("apiList", apiList);
+
 
     return (
         <div>
-            <Location/>
-            <Hereapi />
             <GoogleMap
                 defaultOptions = {{ styles: mapStyles}}
-                defaultZoom = { 10 }
+                defaultZoom = { 12 }
                 defaultCenter = {{ lat: 52.520008, lng: 13.404954 }}>
                 {
                     list&&list.map(val => (
@@ -40,8 +51,8 @@ function Map () {
                                 setSelectedPlaceHere(null);
                             }}
                             icon={{
-                                url: "/images/mee.png",
-                                scaledSize: new window.google.maps.Size(25, 25)
+                                url: "/images/berlin.png",
+                                scaledSize: new window.google.maps.Size(40, 40)
                             }}
                         /> ))
                 }
@@ -55,8 +66,8 @@ function Map () {
                                 setSelectedPlace(null);
                             }}
                             icon={{
-                                url: "/images/mee.png",
-                                scaledSize: new window.google.maps.Size(25, 25)
+                                url: "/images/berlin.png",
+                                scaledSize: new window.google.maps.Size(40, 40)
                             }}
                         /> ))
                 }
@@ -64,6 +75,7 @@ function Map () {
                 {
                     selectedPlace && (
                         <InfoWindow
+
                             position = {{ lat: selectedPlace.venue.location.lat, lng: selectedPlace.venue.location.lng}}
                             onCloseClick = {() => {
                                 setSelectedPlace(null);
@@ -71,7 +83,7 @@ function Map () {
                             }}
                         >
                             <div>
-                                <h2>{selectedPlace.venue.name}</h2>
+                                <h5>{selectedPlace.venue.name}</h5>
                                 <p>{selectedPlace.venue.location.address}</p>
                             </div>
                         </InfoWindow>
@@ -80,6 +92,7 @@ function Map () {
                 {
                     selectedPlaceHere && (
                         <InfoWindow
+
                             position = {{ lat: selectedPlaceHere.position[0], lng: selectedPlaceHere.position[1]}}
                             onCloseClick = {() => {
                                 setSelectedPlaceHere(null);
@@ -87,7 +100,7 @@ function Map () {
                             }}
                         >
                             <div>
-                                <h2>{selectedPlaceHere.category.title}</h2>
+                                <h5>{selectedPlaceHere.category.title}</h5>
                                 <p>{selectedPlaceHere.vicinity}</p>
                             </div>
                         </InfoWindow>
@@ -97,12 +110,30 @@ function Map () {
     );
 }
 
-
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default function Mapapp () {
+
+    let list = useSelector(
+        state => state && state.post
+    );
+
+    let apiList = useSelector(
+        state => state && state.posthere
+    );
+
     return (
         <div className = "map-home">
+            <Location/>
+            <Hereapi />
+            <div className="places">
+                {
+                    list&&list.map(val => (<p className="placesin" key={val.venue.id}> {val.venue.name}<StampButton /></p>))
+                }
+                {
+                    apiList&&apiList.map(val => (<p className="placesin" key={val.id}> {val.title}<StampButton /></p>))
+                }
+            </div>
             <div style = {{ width: '60vw', height: '60vh' }}>
                 <WrappedMap
                     googleMapURL =

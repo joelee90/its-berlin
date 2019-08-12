@@ -26,3 +26,10 @@ exports.updateBio = function updateBio(bio, id) {
         [bio, id]
     );
 };
+
+exports.savePlaceApi = function savePlaceApi(place_id) {
+    return db.query(
+        `INSERT INTO users (place_id) VALUES ($1)`,
+        [place_id]
+    );
+};

@@ -120,6 +120,14 @@ app.post('/profile', async (req, res) => {
     }
 });
 
+//saving HereApi in db
+app.post('/saveFourApi', async (req, res) => {
+    try {
+        await db.savePlaceApi(req.id);
+    } catch (err){
+        console.log("err", err);
+    }
+});
 
 app.get('*', function(req, res) {
     if(!req.session.userId) {

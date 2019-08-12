@@ -13,5 +13,18 @@ header {
 
 .map-home {
     display: grid;
-    grid-template-columns: 0.4fr 1fr 0.4fr;
+    grid-template-columns: 0.5fr 1fr;
+    margin-top: 3vw;
+}
+
+.places {
+    border: 1px solid black;
+    max-width: 35vw;
+    height: 60vh;
+    margin-left: 5vw;
+    overflow-y: scroll;
+}
+
+.placesin {
+    border: 1px solid black;
 }

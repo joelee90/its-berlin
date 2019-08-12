@@ -7,9 +7,17 @@ export async function getFourSquare (endPoint, parameters) {
         // console.log("data", data);
         // console.log("data", data.data.response.groups[0].items);
         let specificData = data.data.response.groups[0].items;
+        let arr = [];
+        specificData.forEach(i =>
+            arr.push(i.venue.id)
+        );
+        console.log("arr", arr);
+        // let specificDataforDb = data.data.response.groups[0].items;
+        let saveData = await axios.post('/saveHereApi');
+        // console.log("saveData", saveData);
         return {
             type: "GET_FOUR_SQUARE",
-            post: specificData
+            post: saveData
         };
     } catch(err) {
         console.log("err in actions fourSquare", err);
@@ -25,6 +33,8 @@ export async function getHereApi () {
         // console.log("data hereapi", data);
         // console.log("data hereapi", data.data.results.items);
         let specificDataHere = data.data.results.items;
+        // let saveData = await axios.post('/saveHereApi', specificDataHere);
+        // console.log("saveData", saveData);
         return {
             type: "GET_HERE_API",
             posthere: specificDataHere

@@ -8,5 +8,8 @@ CREATE TABLE users(
     password VARCHAR NOT NULL,
     url VARCHAR(600),
     bio text,
+    sender_id INT,
+    place_id INT,
+    accepted BOOLEAN DEFAULT false,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
