@@ -5,8 +5,8 @@ import { HashRouter, Route } from 'react-router-dom';
 
 export default function Welcome() {
     return (
-        <div>
-            <h1>Welcome</h1>
+        <div className="welcome">
+            <h1>it's Berlin</h1>
             <img style = {{ width: "200px" }} src = "/images/home.jpg"/>
             <HashRouter>
                 <div>

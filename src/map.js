@@ -105,6 +105,8 @@ function Map () {
                             </div>
                         </InfoWindow>
                     )}
+                <Location/>
+                <Hereapi />
             </GoogleMap>
         </div>
     );
@@ -118,31 +120,36 @@ export default function Mapapp () {
         state => state && state.post
     );
 
-    let apiList = useSelector(
-        state => state && state.posthere
-    );
+    // let apiList = useSelector(
+    //     state => state && state.posthere
+    // );
 
+    // {
+    //     apiList&&apiList.map(val => (<p className="placesin" key={val.id}> {val.title}<StampButton id = {val.id}/></p>))
+    // }
     return (
-        <div className = "map-home">
-            <Location/>
-            <Hereapi />
-            <div className="places">
-                {
-                    list&&list.map(val => (<p className="placesin" key={val.venue.id}> {val.venue.name}<StampButton /></p>))
-                }
-                {
-                    apiList&&apiList.map(val => (<p className="placesin" key={val.id}> {val.title}<StampButton /></p>))
-                }
+        <div className="map-home-large">
+            <div className="map-home">
+                <div className="places">
+                    {
+                        list&&list.map(val => (<p className="placesin" key={val.venue.id}> {val.venue.name}<StampButton id = {val.venue.id}/></p>))
+                    }
+
+                </div>
+                <div style = {{ width: '60vw', height: '60vh' }}>
+                    <WrappedMap
+                        googleMapURL =
+                            "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU"
+                        loadingElement={<div style={{ height: '100%' }} />}
+                        containerElement={<div style={{ height: '100%' }} />}
+                        mapElement={<div style={{ height: '100%' }} />}
+                    />
+                </div>
             </div>
-            <div style = {{ width: '60vw', height: '60vh' }}>
-                <WrappedMap
-                    googleMapURL =
-                        "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU"
-                    loadingElement={<div style={{ height: '100%' }} />}
-                    containerElement={<div style={{ height: '100%' }} />}
-                    mapElement={<div style={{ height: '100%' }} />}
-                />
+            <div className="selected-places">
+                <div>PLACES</div>
             </div>
         </div>
+
     );
 }

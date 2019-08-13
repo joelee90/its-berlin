@@ -7,22 +7,23 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker } from "react-google-map
 import Location from './location';
 import Profile from './profile';
 import Mapapp from './map';
+import Home from './home';
 
 export default function App () {
     return (
         <div>
             <BrowserRouter>
                 <header>
-                    <ul>
-                        <li><Link style = {{textDecoration: "none"}} to = "/">Home</Link></li>
-                        <li><Link style = {{textDecoration: "none"}} to = "/map">Map</Link></li>
-                        <li><Link style = {{textDecoration: "none"}} to = "/profile">Profile</Link></li>
-                        <li><Link style = {{textDecoration: "none"}} to = "/mission">Mission</Link></li>
-                        <li><a style = {{textDecoration: "none"}} href = "/logout">Logout</a></li>
-                    </ul>
+                    <nav className="navigation">
+                        <Link style = {{textDecoration: "none"}} to = "/home">Home</Link>
+                        <Link style = {{textDecoration: "none"}} to = "/profile">Profile</Link>
+                        <Link style = {{textDecoration: "none"}} to = "/map">Map</Link>
+                        <a style = {{textDecoration: "none"}} href = "/logout">Logout</a>
+                    </nav>
                 </header>
-                <Route path = "/map" component = {Mapapp} />
+                <Route path = "/home" component = {Home} />
                 <Route path = "/profile" component = {Profile} />
+                <Route path = "/map" component = {Mapapp} />                        
             </BrowserRouter>
         </div>
     );

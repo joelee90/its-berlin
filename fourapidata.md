@@ -1,0 +1,69 @@
+INSERT INTO places (place_id) VALUES
+('4adcda7cf964a520524721e3'),
+('4bdc2b632a3a0f47fcb2b1b6'),
+('4c31d874a0ced13a0528146e'),
+('4bc4ecf30969a593e032636e'),
+('57401dd8498ee283bacead7e'),
+('4bea8f256295c9b62e828608'),
+('4b33af2ef964a520ce1c25e3'),
+('4c275413f1272d7f67f887c5'),
+('4bbdea8c8a4fb71387863d9d'),
+('4b0abfeaf964a520462723e3'),
+('4b10f428f964a520f77623e3'),
+('52d47d13498eec449cd01896'),
+('4adcda7df964a520ab4721e3'),
+('4adcda7cf964a520504721e3'),
+('5839f8284bc2f13036a2f45a'),
+('4ed936cae5fa78b16cb3a807'),
+('4adcda7ef964a520e04721e3'),
+('4b7c8dbff964a520aa9a2fe3'),
+('4adcda72f964a520234521e3'),
+('4bb8541f1261d13a118fe898'),
+('4bac9df2f964a52089fe3ae3'),
+('50a293bbe4b02a26c0e32ccf'),
+('4c658e84b80abe9ab391cae5'),
+('4d5d07251ef2f04de2dbfacd'),
+('4b7f0341f964a520491030e3'),
+('4d997bb2744f3704ac200858'),
+('4adcda7cf964a5205f4721e3'),
+('4bd7d6155cf276b0bd209c00'),
+('4c827a05d34ca143f1402c80'),
+('4adcda72f964a5204d4521e3');
+
+//insert into table.
+
+UPDATE users SET place_id = '4adcda7cf964a520524721e3' WHERE id = 1;
+
+UPDATE users SET sender_id = 1 WHERE id = 1;
+UPDATE users SET sender_id =  WHERE id = 2;
+UPDATE users SET sender_id = 32 WHERE id = 32;
+
+('4bdc2b632a3a0f47fcb2b1b6')
+('4c31d874a0ced13a0528146e')
+('4bc4ecf30969a593e032636e')
+('57401dd8498ee283bacead7e')
+('4bea8f256295c9b62e828608')
+('4b33af2ef964a520ce1c25e3')
+('4c275413f1272d7f67f887c5')
+('4bbdea8c8a4fb71387863d9d')
+('4b0abfeaf964a520462723e3')
+('4b10f428f964a520f77623e3')
+('52d47d13498eec449cd01896')
+('4adcda7df964a520ab4721e3')
+('4adcda7cf964a520504721e3')
+('5839f8284bc2f13036a2f45a')
+('4ed936cae5fa78b16cb3a807')
+('4adcda7ef964a520e04721e3')
+('4b7c8dbff964a520aa9a2fe3')
+('4adcda72f964a520234521e3')
+('4bb8541f1261d13a118fe898')
+('4bac9df2f964a52089fe3ae3')
+('50a293bbe4b02a26c0e32ccf')
+('4c658e84b80abe9ab391cae5')
+('4d5d07251ef2f04de2dbfacd')
+('4b7f0341f964a520491030e3')
+('4d997bb2744f3704ac200858')
+('4adcda7cf964a5205f4721e3')
+('4bd7d6155cf276b0bd209c00')
+('4c827a05d34ca143f1402c80')
+('4adcda72f964a5204d4521e3')

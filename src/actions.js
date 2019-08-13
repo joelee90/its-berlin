@@ -7,17 +7,17 @@ export async function getFourSquare (endPoint, parameters) {
         // console.log("data", data);
         // console.log("data", data.data.response.groups[0].items);
         let specificData = data.data.response.groups[0].items;
-        let arr = [];
-        specificData.forEach(i =>
-            arr.push(i.venue.id)
-        );
-        console.log("arr", arr);
+        // let arr = [];
+        // specificData.forEach(i =>
+        //     arr.push(i.venue.id)
+        // );
+        // console.log("arr", arr);
         // let specificDataforDb = data.data.response.groups[0].items;
-        let saveData = await axios.post('/saveHereApi');
+        // let saveData = await axios.post('/saveHereApi');
         // console.log("saveData", saveData);
         return {
             type: "GET_FOUR_SQUARE",
-            post: saveData
+            post: specificData
         };
     } catch(err) {
         console.log("err in actions fourSquare", err);

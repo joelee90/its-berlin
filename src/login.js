@@ -12,7 +12,7 @@ export default function Login () {
             let log = await axios.post('/login', { values });
             console.log("log", log.data);
             if(log.data.login) {
-                location.replace('/');
+                location.replace('/home');
             } else {
                 setError(true);
             }
@@ -23,12 +23,12 @@ export default function Login () {
 
     return (
         <div>
-            <div className="login-container">
-                <form onSubmit = { submit } >
+            <div className="login-container-large">
+                <form className="login-container" onSubmit = { submit } >
                     { error && <div className="error"> Ooops! Something went wrong! </div> }
                     <input className="input" type="email" name="email" placeholder="email" onChange = { handleChange } value={values.email || ''}required />
                     <input className="input" type="password" name="password" placeholder="password"  onChange = { handleChange } value={values.password || ''} required />
-                    <button type="submit">Login</button>
+                    <button className="button" type="submit">Login</button>
                 </form>
             </div>
         </div>

@@ -23,16 +23,16 @@ export default function Form () {
     }
 
     return (
-        <div>
-            <div className="regi-container">
-                <form onSubmit = { handleSubmit } >
+        <div className="regi-container-large">
+            <div>
+                <form className="regi-container" onSubmit = { handleSubmit } >
                     { error && <div className="error"> Ooops! Something went wrong! </div> }
                     <input className="input" type="text" name="firstname" placeholder="firstname" onChange = { handleChange } value={values.firstname || ''} required />
                     <input className="input" type="text" name="lastname" placeholder="lastname" onChange = { handleChange } value={values.lastname || ''} required />
                     <input className="input" type="email" name="email" placeholder="email" onChange = { handleChange } value={values.email || ''}required />
                     <input className="input" type="text" name="phonenumber" placeholder="phonenumber" onChange = { handleChange } value={values.phonenumber || ''} required />
                     <input className="input" type="password" name="password" placeholder="password"  onChange = { handleChange } value={values.password || ''} required />
-                    <button type="submit">Submit</button>
+                    <button className="button" type="submit">Submit</button>
                 </form>
             </div>
             <div className="already-member">

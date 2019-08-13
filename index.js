@@ -121,12 +121,107 @@ app.post('/profile', async (req, res) => {
 });
 
 //saving HereApi in db
-app.post('/saveFourApi', async (req, res) => {
+// app.post('/saveFourApi', async (req, res) => {
+//     try {
+//         await db.savePlaceApi(req.id);
+//     } catch (err){
+//         console.log("err", err);
+//     }
+// });
+
+//check visitied
+app.post('/checkVisited', async (req, res) => {
     try {
-        await db.savePlaceApi(req.id);
-    } catch (err){
-        console.log("err", err);
+        // console.log("req.body.button checkvisited", req.body.button);
+        console.log("req.body checkvisited", req.body);
+        // const placeId = req.body.id;
+        // console.log("placeId", placeId);
+        const showButton = await db.showButtonText(req.body.id);
+        // console.log("showButton", showButton.rows);
+        if(showButton.rows) {
+            res.json({
+                buttonText: "Add"
+            });
+        } else if(showButton.rows == 0) {
+            res.json({
+                buttonText: "Cancel"
+            });
+        }
+        // const check = await db.checkVisited(1, placeId);
+        // console.log("check", check);
+        // if(check.rows[0].accepted == false) {
+        //     res.json({
+        //         buttonText: "Add"
+        //     });
+        // } else if(check.rows[0].accepted == true) {
+        //     res.json({
+        //         buttonText: "Cancel"
+        //     });
+        // }
+    } catch (err) {
+        console.log("err in get checkVisited", err);
     }
+});
+
+app.post('/changePlaceStatus', async (req, res) => {
+
+    try {
+        const sender = req.session.userId;
+        console.log("sender", sender);
+        const placeId = req.body.id;
+        console.log("placeId", placeId);
+        const buttonStatus = req.body.button;
+        console.log("req.body.button changeplace" , req.body.button);
+        console.log("req.body", req.body);
+
+        try {
+            if(buttonStatus == 'Add') {
+                const addingPlace = await db.addPlace(sender, placeId);
+                console.log("addingPlace", addingPlace);
+                res.json({
+                    buttonText: "Cancel"
+                });
+            } else if(buttonStatus == 'Cancel') {
+                const rmvPlace = await db.removePlace(sender, placeId);
+                console.log("rmvPlace", rmvPlace);
+                res.json({
+                    buttonText: "Add"
+                });
+            }
+        } catch (err) {
+            console.log("err in in changePlaceStatus", err);
+        }
+
+    } catch (err) {
+        console.log("err in btn", err);
+    }
+
+
+
+    // try {
+    //     const placeId = req.body.id;
+    //     console.log("placeId", placeId);
+    //     const buttonStatus = req.body.button;
+    //     try {
+    //         if(buttonStatus == 'Add') {
+    //             const changePlaceT = await db.changePlaceT(1, placeId);
+    //             console.log("changePlaceT", changePlaceT);
+    //             res.json({
+    //                 buttonText: "Cancel"
+    //             });
+    //         } else if(buttonStatus == 'Cancel') {
+    //             const changePlaceF = await db.changePlaceF(1, placeId);
+    //             console.log("changePlace", changePlaceF);
+    //             res.json({
+    //                 buttonText: "Add"
+    //             });
+    //         }
+    //     } catch (err) {
+    //         console.log("err in in changePlaceStatus", err);
+    //     }
+    // } catch (err) {
+    //     console.log("err post changePlaceStatus", err);
+    // }
 });
 
 app.get('*', function(req, res) {

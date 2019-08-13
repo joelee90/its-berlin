@@ -177,24 +177,18 @@ body {
     align-items: center;
     height: 50vh;
     width: 50vw;
-    margin-top: 20px;
-    margin-bottom: : 0;
 }
 
 .profile-img {
     border: 1px solid black;
     height: 20vh;
     width: 18vw;
-    margin: 20px;
+    padding: 10px;
 }
 
 .profile-status {
     border: 1px solid black;
     height: 40vh;
     width: 20vw;
-    margin: 20px;
-}
-
-.textbox {
-    margin: 0;
+    padding: 10px;
 }
