@@ -55,6 +55,17 @@ body {
     margin-right: 2vw;
 }
 
+.selected-places-in {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+
 .placesin {
     border: 1px solid black;
     display: flex;

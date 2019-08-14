@@ -7,6 +7,8 @@ import Location from './location';
 import mapStyles from './mapStyles';
 import Hereapi from './hereapi';
 import StampButton from './stampButton';
+import SelectedPlaces from './selectedplaces';
+import GoogleApi from './google';
 
 // useEffect(() => {
 //     try {
@@ -27,13 +29,17 @@ function Map () {
     let list = useSelector(
         state => state && state.post
     );
-    // console.log("list", list);
+    console.log("list", list);
 
     let apiList = useSelector(
         state => state && state.posthere
     );
     // console.log("apiList", apiList);
 
+    // let googleList = useSelector(
+    //     state => state && state.postgoogle
+    // );
+    // console.log("googleList", googleList);
 
     return (
         <div>
@@ -107,10 +113,12 @@ function Map () {
                     )}
                 <Location/>
                 <Hereapi />
+                <GoogleApi/>
             </GoogleMap>
         </div>
     );
 }
+
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
@@ -119,6 +127,19 @@ export default function Mapapp () {
     let list = useSelector(
         state => state && state.post
     );
+
+    useEffect(() => {
+        console.log("check relation status");
+        (async () => {
+            try {
+                // console.log("props in SelectedPlaces.id ", props.id);
+                const data = await axios.post('/visitedplaces', { id: 44 });
+                console.log('data in selectedplaces', data);
+            } catch(err) {
+                console.log("err in SelectedPlaces btn", err);
+            }
+        })();
+    }, []);
 
     // let apiList = useSelector(
     //     state => state && state.posthere
@@ -132,9 +153,8 @@ export default function Mapapp () {
             <div className="map-home">
                 <div className="places">
                     {
-                        list&&list.map(val => (<p className="placesin" key={val.venue.id}> {val.venue.name}<StampButton id = {val.venue.id}/></p>))
+                        list&&list.map(val => (<div className="placesin" key={val.venue.id}> {val.venue.name}<StampButton id = {val.venue.id}/></div>))
                     }
-
                 </div>
                 <div style = {{ width: '60vw', height: '60vh' }}>
                     <WrappedMap
@@ -147,7 +167,9 @@ export default function Mapapp () {
                 </div>
             </div>
             <div className="selected-places">
-                <div>PLACES</div>
+                {
+                    list&&list.map(val => <SelectedPlaces key={val.venue.id} id = {val.venue.id}/>)
+                }
             </div>
         </div>
 

@@ -1,7 +1,7 @@
 import axios from './axios';
 
 export async function getFourSquare (endPoint, parameters) {
-    console.log("getFourSquare", endPoint, parameters);
+    // console.log("getFourSquare", endPoint, parameters);
     try {
         let data = await axios.get(endPoint + new URLSearchParams(parameters));
         // console.log("data", data);
@@ -43,3 +43,27 @@ export async function getHereApi () {
         console.log("err in actions hereapi", err);
     }
 }
+
+export async function getGooglePlacesApi () {
+    console.log("getGooglePlacesApi");
+    try {
+        let data = await axios.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.520008,13.404954&radius=5000&type=topsights&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU");
+        console.log("google data", data);
+        // let googleApiData = data;
+        return {
+            type: "GET_GOOGLE_PLACES_API",
+            postgoogle: data
+        };
+    } catch(err) {
+        console.log("err in actions googleApi", err);
+    }
+}
+
+// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Germany&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU
+//
+// "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.516667,13.388889&radius=5000&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU;
+//
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.516667,13.388889&radius=5000&type=topsights&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU;
+
+
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.516667,13.388889&radius=5000&type=topsights?&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU

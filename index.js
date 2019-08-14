@@ -133,8 +133,8 @@ app.post('/profile', async (req, res) => {
 app.post('/checkVisited', async (req, res) => {
     try {
         // console.log("req.body.button checkvisited", req.body.button);
-        console.log("req.body checkvisited", req.body);
-        // const placeId = req.body.id;
+        // console.log("req.body checkvisited", req.body);
+        const placeId = req.body.id;
         // console.log("placeId", placeId);
         const showButton = await db.showButtonText(req.body.id);
         // console.log("showButton", showButton.rows);
@@ -167,12 +167,12 @@ app.post('/changePlaceStatus', async (req, res) => {
 
     try {
         const sender = req.session.userId;
-        console.log("sender", sender);
+        // console.log("sender", sender);
         const placeId = req.body.id;
-        console.log("placeId", placeId);
+        // console.log("placeId", placeId);
         const buttonStatus = req.body.button;
-        console.log("req.body.button changeplace" , req.body.button);
-        console.log("req.body", req.body);
+        // console.log("req.body.button changeplace" , req.body.button);
+        // console.log("req.body", req.body);
 
         try {
             if(buttonStatus == 'Add') {
@@ -197,6 +197,19 @@ app.post('/changePlaceStatus', async (req, res) => {
     }
 
 
+    app.post('/visitedplaces', async (req, res) => {
+        console.log('req.body', req.body);
+        try {
+            const senderId = req.session.userId;
+            console.log("senderId in visitedPlaces", senderId);
+            const placeId = req.body.id;
+            console.log("placeId visitedPlaces", placeId);
+            res.json({success:true});
+
+        } catch (err) {
+            console.log("err in get checkVisited", err);
+        }
+    });
 
     // try {
     //     const placeId = req.body.id;

@@ -16,5 +16,13 @@ export default function(state = {}, action) {
         };
     }
 
+    if(action.type == 'GET_GOOGLE_PLACES_API') {
+        console.log("GET_GOOGLE_PLACES_API");
+        state = {
+            ...state,
+            postgoogle: action.postgoogle
+        };
+    }
+
     return state;
 }

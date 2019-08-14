@@ -40,21 +40,43 @@ exports.updateBio = function updateBio(bio, id) {
         [bio, id]
     );
 };
-
+//old
+// exports.addPlace = function addPlace(sender_id, place_id) {
+//     console.log("addPlace sender_id", sender_id);
+//     console.log("addPlace sender_id", place_id);
+//     return db.query (
+//         `UPDATE places SET sender_id = $1 WHERE place_id = $2 RETURNING sender_id`,
+//         [sender_id, place_id]
+//     );
+// };
+//new
 exports.addPlace = function addPlace(sender_id, place_id) {
+    console.log("addPlace sender_id", sender_id);
+    console.log("addPlace sender_id", place_id);
     return db.query (
-        `UPDATE places SET sender_id = $1 WHERE place_id = $2 RETURNING sender_id`,
+        `INSERT INTO relations (sender_id, place_id) VALUES ($1, $2) RETURNING *`,
         [sender_id, place_id]
     );
 };
 
+//new
 exports.removePlace = function removePlace(sender_id, place_id) {
+    console.log("removePlace sender_id", sender_id);
+    console.log("removePlace place_id", place_id);
     return db.query (
-        `
-        DELETE from places WHERE (sender_id = $1 and place_id = $2)`,
+        `DELETE FROM relations WHERE (sender_id=$1 AND place_id = $2)`,
         [sender_id, place_id]
     );
 };
+//old
+// exports.removePlace = function removePlace(place_id) {
+//     console.log("removePlace place_id", place_id);
+//     return db.query (
+//         `
+//         UPDATE places SET sender_id = null WHERE place_id = $1 RETURNING sender_id`,
+//         [place_id]
+//     );
+// };
 
 //merge TABLE
 
