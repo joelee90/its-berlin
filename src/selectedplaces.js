@@ -11,7 +11,6 @@ export default function SelectedPlaces(props) {
         console.log("check relation status");
         (async () => {
             try {
-                console.log("props in SelectedPlaces.id ", props.id);
                 const data = await axios.post('/visitedplaces', { id: props.id });
                 console.log('data in selectedplaces', data);
             } catch(err) {

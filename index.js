@@ -5,9 +5,13 @@ const db = require("./utils/db");
 const bc = require("./utils/bc");
 const cookieSession = require("cookie-session");
 const multer = require('multer');
-const uidSafe = require('uid-safe');const path = require('path');
+const uidSafe = require('uid-safe');
+const path = require('path');
 const s3 = require('./s3');
 const csurf = require('csurf');
+const config = require('./config');
+// const moment = require("moment");
+
 
 const diskStorage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -54,6 +58,8 @@ app.get('/welcome', (req,res) => {
     res.sendFile(__dirname + '/index.html');
     // }
 });
+
+
 
 //Logout
 app.get('/logout', (req, res) => {
@@ -136,6 +142,9 @@ app.post('/checkVisited', async (req, res) => {
         // console.log("req.body checkvisited", req.body);
         const placeId = req.body.id;
         // console.log("placeId", placeId);
+        // console.log("req.body.name", req.body.name);
+        // console.log("req.body", req.body);
+        // console.log("req.body.button", req.body.button);
         const showButton = await db.showButtonText(req.body.id);
         // console.log("showButton", showButton.rows);
         if(showButton.rows) {
@@ -147,95 +156,114 @@ app.post('/checkVisited', async (req, res) => {
                 buttonText: "Cancel"
             });
         }
-        // const check = await db.checkVisited(1, placeId);
-        // console.log("check", check);
-        // if(check.rows[0].accepted == false) {
-        //     res.json({
-        //         buttonText: "Add"
-        //     });
-        // } else if(check.rows[0].accepted == true) {
-        //     res.json({
-        //         buttonText: "Cancel"
-        //     });
-        // }
     } catch (err) {
         console.log("err in get checkVisited", err);
     }
 });
 
 app.post('/changePlaceStatus', async (req, res) => {
-
+    const sender = req.session.userId;
+    // console.log("sender", sender);
+    const placeId = req.body.id;
+    // console.log("placeId", placeId);
+    const buttonStatus = req.body.button;
+    // console.log("req.body.button changeplace" , req.body.button);
+    // console.log("req.body", req.body);
+    const name = req.body.name;
     try {
-        const sender = req.session.userId;
-        // console.log("sender", sender);
-        const placeId = req.body.id;
-        // console.log("placeId", placeId);
-        const buttonStatus = req.body.button;
-        // console.log("req.body.button changeplace" , req.body.button);
-        // console.log("req.body", req.body);
-
-        try {
-            if(buttonStatus == 'Add') {
-                const addingPlace = await db.addPlace(sender, placeId);
-                console.log("addingPlace", addingPlace);
-                res.json({
-                    buttonText: "Cancel"
-                });
-            } else if(buttonStatus == 'Cancel') {
-                const rmvPlace = await db.removePlace(sender, placeId);
-                console.log("rmvPlace", rmvPlace);
-                res.json({
-                    buttonText: "Add"
-                });
-            }
-        } catch (err) {
-            console.log("err in in changePlaceStatus", err);
+        if(buttonStatus == 'ADD') {
+            const addingPlace = await db.addPlace(sender, name, placeId);
+            console.log("addingPlace", addingPlace);
+            res.json({
+                buttonText: "DELETE"
+            });
+        } if(buttonStatus == 'DELETE') {
+            const rmvPlace = await db.removePlace(sender, name, placeId);
+            console.log("rmvPlace", rmvPlace);
+            console.log("sender", sender);
+            console.log("placeId", placeId);
+            res.json({
+                buttonText: "ADD"
+            });
         }
-
     } catch (err) {
-        console.log("err in btn", err);
+        console.log("err in in changePlaceStatus", err);
     }
-
-
-    app.post('/visitedplaces', async (req, res) => {
-        console.log('req.body', req.body);
-        try {
-            const senderId = req.session.userId;
-            console.log("senderId in visitedPlaces", senderId);
-            const placeId = req.body.id;
-            console.log("placeId visitedPlaces", placeId);
-            res.json({success:true});
-
-        } catch (err) {
-            console.log("err in get checkVisited", err);
-        }
-    });
-
-    // try {
-    //     const placeId = req.body.id;
-    //     console.log("placeId", placeId);
-    //     const buttonStatus = req.body.button;
-    //     try {
-    //         if(buttonStatus == 'Add') {
-    //             const changePlaceT = await db.changePlaceT(1, placeId);
-    //             console.log("changePlaceT", changePlaceT);
-    //             res.json({
-    //                 buttonText: "Cancel"
-    //             });
-    //         } else if(buttonStatus == 'Cancel') {
-    //             const changePlaceF = await db.changePlaceF(1, placeId);
-    //             console.log("changePlace", changePlaceF);
-    //             res.json({
-    //                 buttonText: "Add"
-    //             });
-    //         }
-    //     } catch (err) {
-    //         console.log("err in in changePlaceStatus", err);
-    //     }
-    // } catch (err) {
-    //     console.log("err post changePlaceStatus", err);
-    // }
 });
+
+
+app.post('/visitedplaces', async (req, res) => {
+    // console.log('req.body', req.body);
+    try {
+        const senderId = req.session.userId;
+        // console.log("senderId in visitedPlaces", senderId);
+        const placeId = req.body.id;
+        // console.log("placeId visitedPlaces", placeId);
+    } catch (err) {
+        console.log("err in get checkVisited", err);
+    }
+});
+
+//get list of updated places
+app.get('/updatedplaces', async (req, res) => {
+    try {
+        const data = await db.getUpdatedPlaces(req.session.userId);
+        console.log("list from updatedplaces", data);
+        res.json(data);
+    } catch(err) {
+        console.log("err in updatedplaces", err);
+    }
+});
+
+// app.get("/searchinfo", function(req, res) {
+//     let url =
+//         "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.520008,13.404954&language=en&radius=5000&keyword=things%20to%20do%20in%20Berlin&rankby=prominence&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU";
+//     app.get(url).then(({ data }) => {
+//         res.json(data);
+//     });
+// });
+
+
+// io.on('connection', async function(socket) {
+//     console.log(`socket with the id ${socket.id} is now connected`);
+//     // onLineUsers[socket.id] = socket.request.session.userId;
+//     //online user, check that id is on the list once. then emit event about user appearance.
+//     let userId = socket.request.session.userId;
+//     console.log("userId connection", userId);
+//     let socketId = socket.id;
+//
+//     if (!userId) {
+//         return socket.disconnect(true);
+//     }
+//
+//     const latestMsg = await db.getLastTenMessages();
+//     // console.log("latestMsg", latestMsg.rows);
+//     latestMsg.rows.forEach(val => {
+//         val.created_at = moment(val.created_at, moment.ISO_8601).fromNow();
+//     });
+//     io.emit('chatMessages', latestMsg.rows.reverse());
+//
+//     socket.on('Send chat', async (data) => {
+//         let newMsg = await db.saveMessages(userId, data);
+//         let user = await db.getUserById(userId);
+//         // console.log("data from chat.js", data);
+//         // console.log("newMsg.rows", newMsg.rows);
+//         // console.log("user", user.rows);
+//         newMsg.rows[0].created_at = moment(
+//             newMsg.rows[0].created_at,
+//             moment.ISO_8601
+//         ).fromNow();
+//
+//         const result = {...newMsg.rows[0], ...user.rows[0]};
+//         // console.log("results", result);
+//         io.emit('newChatMessage', result);
+//     });
+//
+//     socket.on('disconnect', function() {
+//         console.log(`socket with the id ${socket.id} is now disconnected`);
+//     });
+// });
+
 
 app.get('*', function(req, res) {
     if(!req.session.userId) {

@@ -1,5 +1,37 @@
 export default function(state = {}, action) {
 
+    if(action.type == 'GET_PLACES') {
+        state = {
+            ...state,
+            places: action.places
+        };
+    }
+
+    if(action.type == 'ADD_LIST') {
+        console.log('ADD_LIST');
+        state = {
+            ...state,
+            places: [...state.places, {
+                accepted: false,
+                id: action.id,
+                place_id: action.id,
+                place_name: action.name
+            }]
+        };
+    }
+
+    if(action.type == 'REMOVE_LIST') {
+
+        state = {
+            ...state,
+            places: state.places.filter(place => {
+                console.log('REMOVE_LIST');
+                console.log(place.place_id, action.id);
+                return place.place_id != action.id;
+            })
+        };
+    }
+
     if(action.type == 'GET_FOUR_SQUARE') {
         console.log("GET_FOUR_SQUARE");
         state = {

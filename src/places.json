@@ -1,0 +1,1448 @@
+{
+   "html_attributions" : [],
+   "next_page_token" : "CrQCLAEAAIYid2wT_ci28AMlr4I6_AdqkU9WvPIcDGtPDlYv0aa899_ALFdSnJpqJXzo6a_y80ynG2putcAI_oOIG8G3IRignjYHzmgXnf10HjE3tGr9tB9652Jm6uh7Hs_WtkC91u-tQF2t3Cv5A9TXolKLAQnTBkE3DoQh-T7zrK0Em3dZb6mHA8dw5kQ94ha_UGAKjOgOHJugKzl7aavdQQK66_ZxSFQGDDsNJj89sE1DjY0QLNLE8ajrln9ooq4QKofGrsFlhVUxUHbE74s7ZZ32fsABTqgGXFuqFU5aGxOZJnFr0A9AoDYotnH-0seZUKNbXWGgq7SoFaIpUvr91aozrYx9W46d0seAf7B7bk3MKNinDR_EJVwLzfelRjAPoDvpVdZmE7ZacGSYkBSjvv3aN_ASEGxiPTqO5a0iGvBL7Ez9rZgaFNACZ-Lpj8ZN42O5jPJSEsDcHnF2",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5066836,
+               "lng" : 13.3837024
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50830692989272,
+                  "lng" : 13.3872789
+               },
+               "southwest" : {
+                  "lat" : 52.50560727010728,
+                  "lng" : 13.3808229
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "0af235312b215da46e9026247677f2adf89b858c",
+         "name" : "Topography of Terror",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2160,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/118273555757522422406/photos\"\u003eAlmir\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAtCmicdXXRDi4sWdPseGB6JKnbrc36jAIOT4l5mWGywse_8qIjnJRP5DFofUL51LS1-A3nn_Ci5eu9lV9Vjsgy4CJBGU1tUPXVjsAfII9z1rUJ59lPoMxKh9ah9ecTSOpEhDG9yEXzrH8Wc0vihWxkGpSGhRnLTMnm1ypCkq--GT1izPev6TiFg",
+               "width" : 3840
+            }
+         ],
+         "place_id" : "ChIJx3iXOMxRqEcRSGbJBczVSzc",
+         "plus_code" : {
+            "compound_code" : "G94M+MF Berlin",
+            "global_code" : "9F4MG94M+MF"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJx3iXOMxRqEcRSGbJBczVSzc",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 18648,
+         "vicinity" : "Niederkirchnerstraße 8, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5139474,
+               "lng" : 13.3787127
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.51546462989272,
+                  "lng" : 13.38063197989272
+               },
+               "southwest" : {
+                  "lat" : 52.51276497010728,
+                  "lng" : 13.37793232010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "35681d39a8cdbe8ff94c10f764b2acafaaa3359b",
+         "name" : "Memorial to the Murdered Jews of Europe",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2160,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101164333555833594137/photos\"\u003eMarie Janes\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAFWic0VVBlpQUx6NmCp7ElNs5idyTw4FkOYHPCYH8Z6ziORZwILiyzkBcxlXxtc98vtqfCRZdYjqQ1Cu1L8hupTI7tTuArG8XrpXhXbvA-lgVXAATJ0b07n-a8NuuZbJTEhCqaceLS3LYyKn55Cu1mnHWGhREU7z9zICkN-jjDh_Oany1Qh-SUw",
+               "width" : 3840
+            }
+         ],
+         "place_id" : "ChIJW2oZB8ZRqEcRyFvuEpCnNBQ",
+         "plus_code" : {
+            "compound_code" : "G97H+HF Berlin",
+            "global_code" : "9F4MG97H+HF"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJW2oZB8ZRqEcRyFvuEpCnNBQ",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 29890,
+         "vicinity" : "Cora-Berliner-Straße 1, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5079196,
+               "lng" : 13.3377547
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50981519999999,
+                  "lng" : 13.34274385
+               },
+               "southwest" : {
+                  "lat" : 52.5038968,
+                  "lng" : 13.33189045
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "63054a42e42879c3b17e1819bc86b79b58fd27b9",
+         "name" : "Zoo Berlin",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4128,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/108410568837180830302/photos\"\u003eAndreas Hentschel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAr53SkdcKTk_3A5XsypXvdLaNk6sa64s9ykMPZ_L-WjkHewUJR5GdVITVUujB_SYARjNp0l-gwdqXmYl7WlK7Yr9GYJbF5dWc0lBp4jGGfLDpWXaLFvOuK6WHchfhrF6oEhDitMaYkuTqOzx3rUiL0ngiGhSnj4Ny7XJ_f1xJnddOk2-youHh6w",
+               "width" : 3096
+            }
+         ],
+         "place_id" : "ChIJaW_IvapRqEcRfq6A6TrrOYE",
+         "plus_code" : {
+            "compound_code" : "G85Q+54 Berlin",
+            "global_code" : "9F4MG85Q+54"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJaW_IvapRqEcRfq6A6TrrOYE",
+         "scope" : "GOOGLE",
+         "types" : [ "zoo", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 30451,
+         "vicinity" : "Hardenbergplatz 8, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.504818,
+               "lng" : 13.335082
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50601707989272,
+                  "lng" : 13.33642637989272
+               },
+               "southwest" : {
+                  "lat" : 52.50331742010728,
+                  "lng" : 13.33372672010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
+         "id" : "5238b6f02f323ea6be7ff9152857018cef329df8",
+         "name" : "Kaiser Wilhelm Memorial Church",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3907,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/108564775745102090173/photos\"\u003eXiaoqiu QIU\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRZAAAA3ZfuJb5VnIzkDCdqZ1ERQke7nTJ8byvUMPN54decnzjwYGWOgjUP-7SY1b4VkSG-EiV-vWienDWmfT986o6kFhLX3VBSUWoL6lqfSQ69j0DAS2nikjlBjkT9keaitXxqEhDD7hlSH5uT2g5cd2BCApAwGhQf3xLNAEAOjQn_JKicfZ1O4T0ENw",
+               "width" : 2930
+            }
+         ],
+         "place_id" : "ChIJd2v8Cf9QqEcRnLCe4snacBA",
+         "plus_code" : {
+            "compound_code" : "G83P+W2 Berlin",
+            "global_code" : "9F4MG83P+W2"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJd2v8Cf9QqEcRnLCe4snacBA",
+         "scope" : "GOOGLE",
+         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 9510,
+         "vicinity" : "Breitscheidplatz, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5186202,
+               "lng" : 13.3761872
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.52034447989272,
+                  "lng" : 13.37704795
+               },
+               "southwest" : {
+                  "lat" : 52.51764482010728,
+                  "lng" : 13.37360495
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/civic_building-71.png",
+         "id" : "3065805c91179d7489988c94cf182fd1d564da3b",
+         "name" : "Reichstag Building",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3456,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113758805268260206313/photos\"\u003eВалерий Пономаренко\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAYYwhtCmnTfC498FkLmTiZ3h1-lw3XjUzmX259EifR2rk04hOYNScx8N4H01flcZ4PWXqb0d3pQj2McppqtZ8Mix9b2cz2MCTHcCUT59ea1gLCTFAGlg28psN9kRxj-IUEhBxEid-6l0Z6kG6yPIuslnnGhQLDeLLtGH2iW-bQUkJJqfCa1I8mQ",
+               "width" : 5184
+            }
+         ],
+         "place_id" : "ChIJbVDuQcdRqEcR5X3xq9NSG2Q",
+         "plus_code" : {
+            "compound_code" : "G99G+CF Berlin",
+            "global_code" : "9F4MG99G+CF"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJbVDuQcdRqEcR5X3xq9NSG2Q",
+         "scope" : "GOOGLE",
+         "types" : [ "point_of_interest", "establishment" ],
+         "user_ratings_total" : 5372,
+         "vicinity" : "Platz der Republik 1, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5090131,
+               "lng" : 13.3660136
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50982387989272,
+                  "lng" : 13.3684359
+               },
+               "southwest" : {
+                  "lat" : 52.50712422010728,
+                  "lng" : 13.3649695
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "59c66387e796c0cfe5a456d1a91e73497dd2b7b5",
+         "name" : "Gemäldegalerie",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3968,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111150916546332956886/photos\"\u003ePetra Wollny\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAANEGxowNBq8PinZ9FeaGKRdRzL5-m3yKNg1Ps-8MHiTpMnRNWpQwjnV5fHRPTfYj1TL0lvwN4uKhFYBJSBmNB31PXI3BJmas3XJB4ICR2sV9dKuU0imM53t1vtnVjfsbQEhB68aV0MCBDTTGWCAwHJcCRGhQAhr75ic5lRMA_1iGbQwPGlQ0cHw",
+               "width" : 2976
+            }
+         ],
+         "place_id" : "ChIJc3DkFbRRqEcRrUuZhztJVVg",
+         "plus_code" : {
+            "compound_code" : "G958+JC Berlin",
+            "global_code" : "9F4MG958+JC"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJc3DkFbRRqEcRrUuZhztJVVg",
+         "scope" : "GOOGLE",
+         "types" : [ "art_gallery", "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1958,
+         "vicinity" : "Matthäikirchplatz, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.4986982,
+               "lng" : 13.3778846
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50030082989272,
+                  "lng" : 13.37965352989272
+               },
+               "southwest" : {
+                  "lat" : 52.49760117010727,
+                  "lng" : 13.37695387010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "6e7683520060a837f7055853f6b6440ef26312c9",
+         "name" : "German Museum of Technology",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2736,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113135860453994342820/photos\"\u003eFluffy Panther\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAATEgFXrWMEunu3IcgZD3x_VPAl1-OaN1JRaldy_Hqicgc2ZgcS6GKq0X0IYRwt_d3HCrd9Uc4_SNp-N8vc5qBfI6xXWfxTyd4YCXrb4Ah6Ot6kbrfZDdj18A15W0cy84EEhCD2i5Nf2Gx3LMVPn2Oes-OGhTeuw6D3xGTUgJw0GDiaq19PPVJow",
+               "width" : 3648
+            }
+         ],
+         "place_id" : "ChIJuyVqNDJQqEcReGoSmZuRNUQ",
+         "plus_code" : {
+            "compound_code" : "F9XH+F5 Berlin",
+            "global_code" : "9F4MF9XH+F5"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJuyVqNDJQqEcReGoSmZuRNUQ",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 10132,
+         "vicinity" : "Trebbiner Str. 9, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5145434,
+               "lng" : 13.3501189
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.51612787989273,
+                  "lng" : 13.35179772989272
+               },
+               "southwest" : {
+                  "lat" : 52.51342822010729,
+                  "lng" : 13.34909807010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "555009c7ec6e0b2d0a42ad7b2d0931b36aee1c9e",
+         "name" : "Victory Column",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105098628314817309465/photos\"\u003eSebastian Göppert\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAfcTLB9sOGMoOseUO-N2i9o4SqxUIR75GrlU13YMMOYUTFQlSWu3vggBk8HXYIffj24JGA2rV2fIl5cvAAWLn1jdER0fJv-19oN2dvnKLle3mxyi35-svUHks1smEIWf2EhAtrn295__SFvFg_wFRHdABGhQ4530C44vgHz5QJDYzxFe2xU_r5A",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJw_HTKK9RqEcRyeWAo9t_YlU",
+         "plus_code" : {
+            "compound_code" : "G972+R2 Berlin",
+            "global_code" : "9F4MG972+R2"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJw_HTKK9RqEcRyeWAo9t_YlU",
+         "scope" : "GOOGLE",
+         "types" : [ "point_of_interest", "establishment" ],
+         "user_ratings_total" : 10906,
+         "vicinity" : "Großer Stern, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5162746,
+               "lng" : 13.3777041
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.51778567989271,
+                  "lng" : 13.3819998
+               },
+               "southwest" : {
+                  "lat" : 52.51508602010727,
+                  "lng" : 13.3762722
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "53d4e74e582a6b3a7b7ae780ac12251a650696e3",
+         "name" : "Brandenburg Gate",
+         "photos" : [
+            {
+               "height" : 297,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111740299763715535762/photos\"\u003eRafael R.\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAChplb1VQokDnfgjgS3oVqHJxfJVlI0c3V6eqt8vkDSVh00lysqxGBy9nOWL4VgURZ7zy5DOgBRa9xbwVZft09vabXruhm0c1AEx5CIQ2L1J37yycpzUGHh9F-_bJjoUyEhDrjFjJdbxEmxa8k8Ewsy8zGhSijz35gouS8ugRyOe_YWPg7BzX2g",
+               "width" : 495
+            }
+         ],
+         "place_id" : "ChIJiQnyVcZRqEcRY0xnhE77uyY",
+         "plus_code" : {
+            "compound_code" : "G98H+G3 Berlin",
+            "global_code" : "9F4MG98H+G3"
+         },
+         "rating" : 4.7,
+         "reference" : "ChIJiQnyVcZRqEcRY0xnhE77uyY",
+         "scope" : "GOOGLE",
+         "types" : [ "point_of_interest", "establishment" ],
+         "user_ratings_total" : 75940,
+         "vicinity" : "Pariser Platz, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5096488,
+               "lng" : 13.3759441
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.51120177989272,
+                  "lng" : 13.37725677989272
+               },
+               "southwest" : {
+                  "lat" : 52.50850212010727,
+                  "lng" : 13.37455712010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "f6a0b8ca17dfe29b95b5a3c6ea00fbd952270dfa",
+         "name" : "Potsdamer Platz",
+         "photos" : [
+            {
+               "height" : 3968,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114370741073487196924/photos\"\u003eIoan Laslo\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAiKMY5zRcCHQlWlCg-yP92JTQqVsWVGINNWqF0vlvgxelMrBG0fhhSw76vfHjkH6Liwe5vyY13Bj5Y2q0ZQmPAcjRyZa8-0Pcw5HTjhpuktXVyk4iSpJESeVoCyOC0qP5EhDCoi3zyJL_i2l-jYZZVn9CGhTSE8T9XLnnbIE0Xhq31CzP4QRNgg",
+               "width" : 2976
+            }
+         ],
+         "place_id" : "ChIJIeqReMlRqEcRquFNJTyYoUw",
+         "plus_code" : {
+            "compound_code" : "G95G+V9 Berlin",
+            "global_code" : "9F4MG95G+V9"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJIeqReMlRqEcRquFNJTyYoUw",
+         "scope" : "GOOGLE",
+         "types" : [ "point_of_interest", "establishment" ],
+         "user_ratings_total" : 26140,
+         "vicinity" : "Potsdamer Platz, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.51003189999999,
+               "lng" : 13.369693
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.51146602989272,
+                  "lng" : 13.37049342989272
+               },
+               "southwest" : {
+                  "lat" : 52.50876637010727,
+                  "lng" : 13.36779377010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "ecf33ea4c882d0a3ddcac0feee0a666a66818cfd",
+         "name" : "Berliner Philharmonie",
+         "photos" : [
+            {
+               "height" : 1398,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105253048031782484275/photos\"\u003eBerliner Philharmonie\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA6EvpAjNFGEu7UHUzR3zPR3lpLz_qPizfNqCirHPkAtxh8scloya1J5cG1D6Lg9C1uDF_DcgrzjdvkeZBXepExWvU6mVaknkeOTjOzqPBMN10geRajOA4C4B5ZYN27NYxEhAwCWhu1MXsWcyhKK0ZZghMGhQHMPViw0_UzJnDs9N_le0swfeAIA",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJK_QFBbZRqEcRZgBlwtwfnv0",
+         "plus_code" : {
+            "compound_code" : "G969+2V Berlin",
+            "global_code" : "9F4MG969+2V"
+         },
+         "rating" : 4.7,
+         "reference" : "ChIJK_QFBbZRqEcRZgBlwtwfnv0",
+         "scope" : "GOOGLE",
+         "types" : [ "point_of_interest", "establishment" ],
+         "user_ratings_total" : 4496,
+         "vicinity" : "Herbert-von-Karajan-Straße 1, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5074434,
+               "lng" : 13.3903913
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50886992989272,
+                  "lng" : 13.39170982989272
+               },
+               "southwest" : {
+                  "lat" : 52.50617027010728,
+                  "lng" : 13.38901017010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "bec21f6a9dbbd8ebb2fc240a2506e0b54eef8321",
+         "name" : "Checkpoint Charlie",
+         "photos" : [
+            {
+               "height" : 3456,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/118421001217126464160/photos\"\u003eMichal Neumann\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA_Ksxm7ep82k35h6yQJckPAFNJ0V7ozFmxGufNH_jiiDyldESVCHpVffQdmjxia8oGX66BfsgdF85FTs_MmewxGLscOJBcXlS1oJVAdFFmWRxzBk2RN84qFS1Cui5rYkdEhAaW5ZIpk8iEhihed-r1sZSGhSco_UBPeUOp78iIYPYKyMWp7EZRg",
+               "width" : 4608
+            }
+         ],
+         "place_id" : "ChIJzdgmXNFRqEcRyIl9R0IApSM",
+         "plus_code" : {
+            "compound_code" : "G94R+X5 Berlin",
+            "global_code" : "9F4MG94R+X5"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJzdgmXNFRqEcRyIl9R0IApSM",
+         "scope" : "GOOGLE",
+         "types" : [ "point_of_interest", "establishment" ],
+         "user_ratings_total" : 41092,
+         "vicinity" : "Friedrichstraße 43-45, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.53505209999999,
+               "lng" : 13.3901898
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.54080019999999,
+                  "lng" : 13.4004726
+               },
+               "southwest" : {
+                  "lat" : 52.5301358,
+                  "lng" : 13.3826962
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "167f1fd0d83206d0bfc59745415e69508864c7d5",
+         "name" : "Berlin Wall Memorial",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3480,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106005668967394458003/photos\"\u003eAlex Cam\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAWLB_LStxTJWiA7tYilEME3oIHSyZ_9x0Z1OKZRQYGImfAMVgJdc81inLsCy4UhlLew-H4RRUeJgIWE4uRzqvseEZfhesWeNzhB-jS8Y2UwGkJEfp1nG3J4rCi2qWy9G0EhCW-qCAkMyqpapWKNJFjGAnGhScc6XP4dW0h7WwDVZZTCfV51lUmA",
+               "width" : 4640
+            }
+         ],
+         "place_id" : "ChIJZ0KxF_JRqEcRrLHB-4r-U-o",
+         "plus_code" : {
+            "compound_code" : "G9PR+23 Berlin",
+            "global_code" : "9F4MG9PR+23"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJZ0KxF_JRqEcRrLHB-4r-U-o",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 23356,
+         "vicinity" : "Bernauer Str. 111, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.521183,
+               "lng" : 13.3969
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.52215212989273,
+                  "lng" : 13.397684
+               },
+               "southwest" : {
+                  "lat" : 52.51945247010728,
+                  "lng" : 13.394548
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "d09824f185a67dd46cce05be9ef49160bfc95bdf",
+         "name" : "Pergamonmuseum",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104733711464376633323/photos\"\u003eJózef Ostafin\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA425c05Jt7MV98gkuy_2SEeHzbYOfRHKAkOpmPATzuaTJQuzCv8XBAAAuym_Zc5gjErwtE-_xc65KrmK1IPR57kg034eZxNOuubkShplyskdjfTcxxblvVmQ_dRUagqfoEhBV9TOBVcy0VjGuR5gmTl7XGhR9Jni81sJxTvW54bWY2LFiM9DRMw",
+               "width" : 6000
+            }
+         ],
+         "place_id" : "ChIJS4MKBSBOqEcRMVSPqUYFOJ0",
+         "plus_code" : {
+            "compound_code" : "G9CW+FQ Berlin",
+            "global_code" : "9F4MG9CW+FQ"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJS4MKBSBOqEcRMVSPqUYFOJ0",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 15029,
+         "vicinity" : "Bodestraße 1-3, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5023115,
+               "lng" : 13.3954469
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50374997989272,
+                  "lng" : 13.39647027989272
+               },
+               "southwest" : {
+                  "lat" : 52.50105032010727,
+                  "lng" : 13.39377062010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "03883cc5fde94b26f01ad340404e16549b296da6",
+         "name" : "Jewish Museum Berlin",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117348702159060835801/photos\"\u003eFederico Devoto\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAgPjQcC7acM2Kkd2oGJfhcNrnE6bOSgjR-DEz5u1iFrJ2f8ghTKFPIfHiajjljgn6tmYRX5tpFaswx9WIkMIjWTQDrAGoMmTjbo4pqRXSX5j0AQ6lcukn1gBCR97oRd3EEhBKQoTpsGW89DYermILiXJdGhQmLPF2Vgmss6w07ZNwOF5ozNHtXA",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJ-UrRPdVRqEcRTzDm7VTSLEw",
+         "plus_code" : {
+            "compound_code" : "G92W+W5 Berlin",
+            "global_code" : "9F4MG92W+W5"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJ-UrRPdVRqEcRTzDm7VTSLEw",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 8955,
+         "vicinity" : "Lindenstraße 9-14, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.507161,
+               "lng" : 13.39073
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.50850597989272,
+                  "lng" : 13.39193302989272
+               },
+               "southwest" : {
+                  "lat" : 52.50580632010728,
+                  "lng" : 13.38923337010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "f720ae36d403f96991a454f9312bd0786bc21114",
+         "name" : "Wall Museum - Checkpoint Charlie",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117405810999124807375/photos\"\u003eDavid Karlsson\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAALymsVFs6hZ48_zeO9jgOeOAN_5EXTTUAFLOgTQszHemC37TtlOHO1OF2VM65JxTAIykfd6__MkD5zdUJSQk_7W90_TKkDl6r-geNGtfrxEcfdn6mk_hk26_A6k3SNMpEEhDMbKWOBG7Zm09TDDh0pMJhGhRTP0NITVcAqGCdQcYXnVg018AYlw",
+               "width" : 5333
+            }
+         ],
+         "place_id" : "ChIJzdgmXNFRqEcRJjZReHg98L4",
+         "plus_code" : {
+            "compound_code" : "G94R+V7 Berlin",
+            "global_code" : "9F4MG94R+V7"
+         },
+         "rating" : 3.7,
+         "reference" : "ChIJzdgmXNFRqEcRJjZReHg98L4",
+         "scope" : "GOOGLE",
+         "types" : [ "art_gallery", "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 2010,
+         "vicinity" : "Friedrichstraße 43-45, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.520815,
+               "lng" : 13.4094191
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.52249557989273,
+                  "lng" : 13.41109562989272
+               },
+               "southwest" : {
+                  "lat" : 52.51979592010728,
+                  "lng" : 13.40839597010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "2eef0a6a5e30c74ca735362a6fa38d05c3eda536",
+         "name" : "Berliner Fernsehturm",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101607014649721509961/photos\"\u003eYordanka Alipieva\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAiv2DWro8Cud4dzcoLd1Ae_9dD_h_sCIUVotRXA9ZfkRb0fsZGpa4Vp2JFxiHbwAMx9AXj0tLGsElx3xupwMsRhQqJsPl9zMpmEIt_FuetekmNxPtgoQKGXPueXqzx93CEhBNANr75YffySf56QW5_kGyGhQMBvrS6WEcZtX8P3H5lQMiMk9VMg",
+               "width" : 5312
+            }
+         ],
+         "place_id" : "ChIJ6_8UkB9OqEcRoeRJQ0j8-sg",
+         "plus_code" : {
+            "compound_code" : "GCC5+8Q Berlin",
+            "global_code" : "9F4MGCC5+8Q"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJ6_8UkB9OqEcRoeRJQ0j8-sg",
+         "scope" : "GOOGLE",
+         "types" : [ "premise", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 22543,
+         "vicinity" : "Panoramastraße 1A, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5190608,
+               "lng" : 13.401078
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.52029602989272,
+                  "lng" : 13.40212402989272
+               },
+               "southwest" : {
+                  "lat" : 52.51759637010728,
+                  "lng" : 13.39942437010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
+         "id" : "800baeddec26b3acdc328436a0b5adce6520061a",
+         "name" : "Berlin Cathedral Church",
+         "photos" : [
+            {
+               "height" : 902,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110767219853587874922/photos\"\u003etineke fieggen\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAphCmcDmpdVpNj9gKtueZAu2xtc5MDKkmRl09H6tGZ3ZVyWew2X9yU5DzLO_zNegpG-Cy13suD1UbLa7zk9NJ_Y06Kcjk81mpquG509OCSm18d3-xvi8QTDjBT6clIPxfEhC5XG64_XccfQHwRxzVBs1SGhTwYeVmiQOyGz12NsPUJ4OACPeFTg",
+               "width" : 1203
+            }
+         ],
+         "place_id" : "ChIJS9HC895RqEcR_IovsNVoDng",
+         "plus_code" : {
+            "compound_code" : "GC92+JC Berlin",
+            "global_code" : "9F4MGC92+JC"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJS9HC895RqEcR_IovsNVoDng",
+         "scope" : "GOOGLE",
+         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 16671,
+         "vicinity" : "Am Lustgarten, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.50915,
+               "lng" : 13.3749849
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.51057397989272,
+                  "lng" : 13.37631672989272
+               },
+               "southwest" : {
+                  "lat" : 52.50787432010728,
+                  "lng" : 13.37361707010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "a953c9c2c4340322445407e45a199b416ecce9df",
+         "name" : "Panoramapunkt",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1242,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109000491641121306900/photos\"\u003ePANORAMAPUNKT\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA1qZxUt8-elQ3OlZA04Z8ilMGhLtdO8uwa5U4Xjt8QUG6Mepo1SCHNktVr-6lPLtfcgrQ5lQD1DtqYnU10md5_CxIErwQ1NuoGQUnKhmsXWs2CDdai4kf7Zl9bPByjbCkEhAVyLfyEMZUkev17NSh2xDwGhSxh_pJko_DpIrBOVduKsbn_d5JdQ",
+               "width" : 2209
+            }
+         ],
+         "place_id" : "ChIJE7aWHbZRqEcReYCH3I-EWYE",
+         "plus_code" : {
+            "compound_code" : "G95F+MX Berlin",
+            "global_code" : "9F4MG95F+MX"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJE7aWHbZRqEcReYCH3I-EWYE",
+         "scope" : "GOOGLE",
+         "types" : [
+            "cafe",
+            "local_government_office",
+            "food",
+            "point_of_interest",
+            "store",
+            "establishment"
+         ],
+         "user_ratings_total" : 318,
+         "vicinity" : "Potsdamer Platz 1, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5218937,
+               "lng" : 13.3942567
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.52316467989272,
+                  "lng" : 13.39531742989272
+               },
+               "southwest" : {
+                  "lat" : 52.52046502010727,
+                  "lng" : 13.39261777010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "c14cadc0e152da93e3370440932cb0a867aabaf7",
+         "name" : "Bode Museum",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2456,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101432696438453813330/photos\"\u003eFábio Silva\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAk5_RdbJ068u3oHa9W5U28PpSoeVrcfUu5HWttp5gEPwZpG9ntHecJ00mLdK9d1RUfTnp-clfrkSoLtRhm1qpSP8ZLuIauVat5fB3i8m0Izz1kOoX5fSM6eUOtEiqMXGiEhDneQRi-6M5HZwxe3g2tRK4GhQV6rOAhzgZzXQFek4-AtY0z0K5Mg",
+               "width" : 2448
+            }
+         ],
+         "place_id" : "ChIJM28dat1RqEcRTsl_gN7v4jk",
+         "plus_code" : {
+            "compound_code" : "G9CV+QP Berlin",
+            "global_code" : "9F4MG9CV+QP"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJM28dat1RqEcRTsl_gN7v4jk",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 3070,
+         "vicinity" : "Am Kupfergraben, Berlin"
+     },
+     {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5039563,
+               "lng" : 13.3981579
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5050441302915,
+                  "lng" : 13.3999106802915
+               },
+               "southwest" : {
+                  "lat" : 52.5023461697085,
+                  "lng" : 13.3972127197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "20a9102f326fda5e367b10b7d1817784b76f7232",
+         "name" : "Berlinische Galerie",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 4160,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/108480719372347901831/photos\"\u003eAlan Lam\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAdgA81vfi8Mq686Od0QFxhqUFcJAU4tLvMvsYLFAqZa0ON-g-oiVKn1hehg7XBRqgEIPJSZpKm3SgQFjZdCFc1y5zEtCrqhKQxVX-vwmyytR-I6ic20l5U4pHlet_ddcrEhB_B3bnofv_yQ6w5BikbdZ-GhSxYTp0LPQt3GwQTZ5JXnx6nye6Tg",
+               "width" : 3120
+            }
+         ],
+         "place_id" : "ChIJNRqweCpOqEcR9Wab9cvf6lc",
+         "plus_code" : {
+            "compound_code" : "G93X+H7 Berlin, Germany",
+            "global_code" : "9F4MG93X+H7"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJNRqweCpOqEcR9Wab9cvf6lc",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1900,
+         "vicinity" : "Alte Jakobstraße 124-128, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5321182,
+               "lng" : 13.4100018
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.53348718029149,
+                  "lng" : 13.41137258029151
+               },
+               "southwest" : {
+                  "lat" : 52.5307892197085,
+                  "lng" : 13.4086746197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "ddabbf68f9d09c3c26fa7658aff0a6f34f2c10f4",
+         "name" : "Tchoban Foundation - Museum of architectural drawing",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 628,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111587600539696722787/photos\"\u003eTchoban Foundation - Museum für Architekturzeichnung\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAAyPlN9M3mZIwDLIOKwXI6p94E4lKTj_EdoZXG1oZhKedXfCdgF-b4rrKTRxuo1TwOwN6cBfsHIOOlBGceayj6YnMbMGYfRu6WykuAcDb9FnLwfI2aNDKa4rixX3l5IcGEhB-Df9SSh_YxF__JCDRuoiCGhTTiTHsTOROfQa-WmBHApdJ82pgqA",
+               "width" : 1200
+            }
+         ],
+         "place_id" : "ChIJjRbDOf1RqEcRNoyAtT2-8P0",
+         "plus_code" : {
+            "compound_code" : "GCJ6+R2 Berlin, Germany",
+            "global_code" : "9F4MGCJ6+R2"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJjRbDOf1RqEcRNoyAtT2-8P0",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 68,
+         "vicinity" : "Christinenstraße 18a, Berlin"
+      },
+
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5066346,
+               "lng" : 13.3821792
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5082697302915,
+                  "lng" : 13.3834774802915
+               },
+               "southwest" : {
+                  "lat" : 52.5055717697085,
+                  "lng" : 13.3807795197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "b225f040504928966bdff9dd85edb50162ed188c",
+         "name" : "Gropius-Bau",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 1365,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/102538353851187765102/photos\"\u003eMartin-Gropius-Bau\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAaVtNF2Fey1v8UqK-WHe8rtzNEImy_A9JdSMAfFWNK4_1_0XUgbTRhtc8oVMn2igThnFftcxW35NiU3C-jm2LVqtruiW-gS4-6C9xaJemB3xVaccDVIiBt1uJJ9CPuuK6EhBSxNIAImLD0B1053F-nIsJGhTSz_8aSldvLcgGt8DqSimFAFAS7w",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJ4TYb281RqEcRPHf9ZNl05uM",
+         "plus_code" : {
+            "compound_code" : "G94J+MV Berlin, Germany",
+            "global_code" : "9F4MG94J+MV"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJ4TYb281RqEcRPHf9ZNl05uM",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1787,
+         "vicinity" : "Niederkirchnerstraße 7, Berlin"
+      },
+
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.54773729999999,
+               "lng" : 13.3891433
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5490872802915,
+                  "lng" : 13.3903150302915
+               },
+               "southwest" : {
+                  "lat" : 52.5463893197085,
+                  "lng" : 13.3876170697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "307db8065590cdb5f96a059cf34f59cbad4434ec",
+         "name" : "Berliner Unterwelten",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 450,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/107823820311478977392/photos\"\u003eBerliner Unterwelten e.V.\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA69s3R7gzu2r9lvbbasKnRw3fuLCi78hIQ0p7lva5exg2TNLibT9cOf_nDkb7zGJ2WDv_GNyFV950ZJOpnheKrNfGka3Aci_sf31YlRDi_2HQ3Zlad-d4ZngCR4RQ7jP5EhA3zuYiDViSSxqWSA8CnBGGGhTlzgfNCMqQG9vf_VqjkCI2Z1WOGg",
+               "width" : 800
+            }
+         ],
+         "place_id" : "ChIJT0u41SFSqEcRoksggYtajcA",
+         "plus_code" : {
+            "compound_code" : "G9XQ+3M Berlin, Germany",
+            "global_code" : "9F4MG9XQ+3M"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJT0u41SFSqEcRoksggYtajcA",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "travel_agency", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 4687,
+         "vicinity" : "Brunnenstraße 105, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5181519,
+               "lng" : 13.3969499
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5198011802915,
+                  "lng" : 13.3978441302915
+               },
+               "southwest" : {
+                  "lat" : 52.5171032197085,
+                  "lng" : 13.3951461697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "eaaae5289276b4d9a9d84aa2149433bc59c0d1c5",
+         "name" : "German Historical Museum",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 1151,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104898406905373869231/photos\"\u003eDeutsches Historisches Museum\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAzotvjVktTHHlme64hAZ2G9TZ2rG7XKAW8inodXhrbYCU9kz3nBc9KKzoqAarwwxcWn3Tx8u8QgV9HegnjVYGQHFym9o4x0YzMgf3hn3cNTYwtJwESyFZcZwb_7ZhfIw0EhBGtdyeiwStZPzlatW65vK5GhSWv3miUVnep55wewHJOmykhSi_Mg",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJnZP4HtxRqEcRw0epcRGQ-_k",
+         "plus_code" : {
+            "compound_code" : "G99W+7Q Berlin, Germany",
+            "global_code" : "9F4MG99W+7Q"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJnZP4HtxRqEcRw0epcRGQ-_k",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 5547,
+         "vicinity" : "Unter den Linden 2, Berlin"
+      },
+
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5201349,
+               "lng" : 13.3976459
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5213541302915,
+                  "lng" : 13.3993904802915
+               },
+               "southwest" : {
+                  "lat" : 52.5186561697085,
+                  "lng" : 13.3966925197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "3bdea9e47ccf918154d95ae6ec8ae231273a25ac",
+         "name" : "Egyptian Museum and Papyrus Collection",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 3264,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100252287602799620483/photos\"\u003eKim Goethals\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAXFeSS8XnnbWRi5w8gJ1bTDBmUG6vtrz09OKGtD5o9YzWS6DdqA_ZzffUYvflMAhhM8kj0avSJufMIEIE6HdILxGI3rK-JA2HrMk3HlTWj04KjDkAZoHQRt5J286LWnC6EhD2Kzs8rSH2m8yUTbkaSdwxGhQQOF2LViDOHQHkBzeU2j4McKb0lA",
+               "width" : 2448
+            }
+         ],
+         "place_id" : "ChIJM28dat1RqEcRKXIADGmEr-4",
+         "plus_code" : {
+            "compound_code" : "G9CX+33 Berlin, Germany",
+            "global_code" : "9F4MG9CX+33"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJM28dat1RqEcRKXIADGmEr-4",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 866,
+         "vicinity" : "Bodestraße 1-3, Berlin"
+      },
+
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5305726,
+               "lng" : 13.3791755
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5314458302915,
+                  "lng" : 13.3808956802915
+               },
+               "southwest" : {
+                  "lat" : 52.5287478697085,
+                  "lng" : 13.3781977197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "204ebb2d3876cdf416eddfb905aa06f8af33aea9",
+         "name" : "Museum für Naturkunde",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 555,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/107455161792308319065/photos\"\u003eMuseum für Naturkunde\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAiMBT4JUbdUJvR00SL91Iimv8kE2V0e9gopYDpCWCXkmHeExTcFMitEINnM1Q3DW29lC5KqzrEMYkzz0g9Sx46_Ug_wb-HVxFb7mjOda9X5LK7CD2uwWeh8c1ht4Xc-EEEhDxkTAoy_plAsNk96G-yWmJGhRRKcJSM9SXOwEEdAZDD1TeBK3rxw",
+               "width" : 1500
+            }
+         ],
+         "place_id" : "ChIJ3eWqqpRRqEcRjILZ3j4y0Hs",
+         "plus_code" : {
+            "compound_code" : "G9JH+6M Berlin, Germany",
+            "global_code" : "9F4MG9JH+6M"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJ3eWqqpRRqEcRjILZ3j4y0Hs",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1923,
+         "vicinity" : "Invalidenstraße 43, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5157702,
+               "lng" : 13.3948097
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.51724128029149,
+                  "lng" : 13.3963351802915
+               },
+               "southwest" : {
+                  "lat" : 52.51454331970849,
+                  "lng" : 13.3936372197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
+         "id" : "86967d884d8ee6aaf1d823b93fb9e5f150f2601b",
+         "name" : "St. Hedwig's Cathedral",
+         "photos" : [
+            {
+               "height" : 2268,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114535681930226623256/photos\"\u003ePetr Eichler\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAb1XA9f0hICAHLoC1TEJUb-qOTE-EK4J2FMup-Dfrg5t_CFIAcdQLSBMQ7AM2QqSivkZgKgGI8732VGb0um39DW14L2f9X-pYfCETJq0615uaIxk1mlGGex0J38VPng6GEhDAivgyHWTiD8M68SKG6ShEGhScW0GLiXvtLYm5_dy1GlmHITrGhA",
+               "width" : 3297
+            }
+         ],
+         "place_id" : "ChIJxw-fVB5OqEcRd3mOR9VYdBQ",
+         "plus_code" : {
+            "compound_code" : "G98V+8W Berlin, Germany",
+            "global_code" : "9F4MG98V+8W"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJxw-fVB5OqEcRd3mOR9VYdBQ",
+         "scope" : "GOOGLE",
+         "types" : [
+            "museum",
+            "church",
+            "place_of_worship",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total" : 447,
+         "vicinity" : "Hinter der Katholischen Kirche 3, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5284401,
+               "lng" : 13.3721163
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5292659802915,
+                  "lng" : 13.3734370802915
+               },
+               "southwest" : {
+                  "lat" : 52.5265680197085,
+                  "lng" : 13.37073911970849
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "16bb4eafd1a74f1406f29c02ba3e88545f5f3d7f",
+         "name" : "Hamburger Bahnhof - Museum für Gegenwart - Berlin",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 2976,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112088806273294050079/photos\"\u003eLeigh Lucien\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAJSUcE6yEA0izdT4o8vYWQMBKSbJGz6b6mXJgHtdHpbkLs20X3mSsnrC2_dZpVRgmKUPD18Qp7DDO7F7Jog9nTnc722NQiUK3I83YGUThAzuLr7Wm2DmLjUSrHhRWPBV1EhC3IOl6_g0pweiJBvO6x8vQGhQvzLIUurrOj9HrwX63TewELbZqpw",
+               "width" : 3968
+            }
+         ],
+         "place_id" : "ChIJx7_rLZRRqEcRygvqvAT9lWg",
+         "plus_code" : {
+            "compound_code" : "G9HC+9R Berlin, Germany",
+            "global_code" : "9F4MG9HC+9R"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJx7_rLZRRqEcRygvqvAT9lWg",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 2666,
+         "vicinity" : "Invalidenstraße 50-51, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5168889,
+               "lng" : 13.3815918
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5181257302915,
+                  "lng" : 13.3829116802915
+               },
+               "southwest" : {
+                  "lat" : 52.5154277697085,
+                  "lng" : 13.3802137197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+         "id" : "132562d311d3560d1cea70f9c11bb0321830454d",
+         "name" : "Madame Tussauds Berlin",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 855,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105255451269184816455/photos\"\u003eMadame Tussauds Berlin\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAH8cprPjLB5yj3Ag8wIrt0MiTm-WNLK4XMSGqETHLpxDf1VhaUh8w3uyX0AKCE8WM0FHgv6Gzbk-f50jTFg95tmOSd-Ev5roiRVDmf7pPa44mF4-UlYuf7he_S_m7EeMtEhAgWJBX2HELD1H65UNjcDJLGhS4pozNMXIAjIue0paDQzluy5d9zQ",
+               "width" : 1520
+            }
+         ],
+         "place_id" : "ChIJr-gAJ8RRqEcR2Ml0N1JXFu4",
+         "plus_code" : {
+            "compound_code" : "G98J+QJ Berlin, Germany",
+            "global_code" : "9F4MG98J+QJ"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJr-gAJ8RRqEcR2Ml0N1JXFu4",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 9923,
+         "vicinity" : "Unter den Linden 74, Berlin"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5196077,
+               "lng" : 13.4027331
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5209755802915,
+                  "lng" : 13.4041243802915
+               },
+               "southwest" : {
+                  "lat" : 52.5182776197085,
+                  "lng" : 13.4014264197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "f0c7ee87f0fdd24170bd2ed5382242849a2e8050",
+         "name" : "DDR Museum",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 4032,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/107849034570139798841/photos\"\u003ebenjamine lechenne\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA1ni2M4prCxeJfLPAxRa7nvfvCu4J2nMahqDw4M1vpUYoJa4daJaUXuDcZ-lNuFiMXUV-hlDk7I_Jq4DpaaeSYVifMZ9b6kFM7pg5PInnT0oQM0Ky1QdUy8aIkjYolohPEhDHou8OITTq9h4c-hnOkpNEGhR4nuZc2M8PNrLGUGv_nbTb1PYVPA",
+               "width" : 1960
+            }
+         ],
+         "place_id" : "ChIJVzpGU95RqEcRZJgnyr-ZDC0",
+         "plus_code" : {
+            "compound_code" : "GC93+R3 Berlin, Germany",
+            "global_code" : "9F4MGC93+R3"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJVzpGU95RqEcRZJgnyr-ZDC0",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 12718,
+         "vicinity" : "Karl-Liebknecht-Straße 1, Berlin"
+      },
+
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 52.5201349,
+               "lng" : 13.3976462
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 52.5213565802915,
+                  "lng" : 13.3993990802915
+               },
+               "southwest" : {
+                  "lat" : 52.5186586197085,
+                  "lng" : 13.3967011197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
+         "id" : "74bb779c0cc9f7f2b9d74e59c2902e50d9bb80bf",
+         "name" : "Neues Museum",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 2560,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105438239658470679123/photos\"\u003etomas castelan\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAOhilP3Ij5uZpX65M8LlZb1RzjlFyie8EBEbs_CvjYixABgBS9cAMie5YU07bi0jhiJ_X5CxeI9-6FUzfAZf5_XSq4_mmTLhm0XWCO5N8O44H1cn2xkAZRN5_eK0ScSgBEhBXsnnGOWEF9CQvH3DpnMiKGhRtK8NuNtai7reDNDtlNPV_8-XnLw",
+               "width" : 1920
+            }
+         ],
+         "place_id" : "ChIJS8OUk91RqEcRNauNAPV5P40",
+         "plus_code" : {
+            "compound_code" : "G9CX+33 Berlin, Germany",
+            "global_code" : "9F4MG9CX+33"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJS8OUk91RqEcRNauNAPV5P40",
+         "scope" : "GOOGLE",
+         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 5986,
+         "vicinity" : "Bodestraße 1-3, Berlin"
+      }
+
+   ],
+   "status" : "OK"
+}

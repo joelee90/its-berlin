@@ -1,4 +1,36 @@
+INSERT INTO places (place_name, place_id) VALUES
+('Topography of Terror', '0af235312b215da46e9026247677f2adf89b858c'),
+('Memorial to the Murdered Jews of Europe', '35681d39a8cdbe8ff94c10f764b2acafaaa3359b'),
+('Zoo Berlin', '63054a42e42879c3b17e1819bc86b79b58fd27b9'),
+('Kaiser Wilhelm Memorial Church','5238b6f02f323ea6be7ff9152857018cef329df8'),
+('Reichstag Building', '3065805c91179d7489988c94cf182fd1d564da3b'),
+('Gemäldegalerie', '59c66387e796c0cfe5a456d1a91e73497dd2b7b5'),
+('German Museum of Technology', '6e7683520060a837f7055853f6b6440ef26312c9'),
+('Victory Column', '555009c7ec6e0b2d0a42ad7b2d0931b36aee1c9e'),
+('Brandenburg Gate', '53d4e74e582a6b3a7b7ae780ac12251a650696e3'),
+('Potsdamer Platz', 'f6a0b8ca17dfe29b95b5a3c6ea00fbd952270dfa'),
+('Berliner Philharmonie', 'ecf33ea4c882d0a3ddcac0feee0a666a66818cfd'),
+('Checkpoint Charlie', 'bec21f6a9dbbd8ebb2fc240a2506e0b54eef8321'),
+('Berlin Wall Memorial', '167f1fd0d83206d0bfc59745415e69508864c7d5'),
+('Pergamonmuseum', 'd09824f185a67dd46cce05be9ef49160bfc95bdf'),
+('Jewish Museum Berlin', '03883cc5fde94b26f01ad340404e16549b296da6'),
+('Wall Museum - Checkpoint Charlie', 'f720ae36d403f96991a454f9312bd0786bc21114'),
+('Berliner Fernsehturm', '2eef0a6a5e30c74ca735362a6fa38d05c3eda536'),
+('Berlin Cathedral Church', '800baeddec26b3acdc328436a0b5adce6520061a'),
+('Panoramapunkt', 'a953c9c2c4340322445407e45a199b416ecce9df'),
+('Bode Museum', 'c14cadc0e152da93e3370440932cb0a867aabaf7');
+
+
+
+
 INSERT INTO places (place_id) VALUES
+
+
+
+
+
+
+
 ('4adcda7cf964a520524721e3'),
 ('4bdc2b632a3a0f47fcb2b1b6'),
 ('4c31d874a0ced13a0528146e'),

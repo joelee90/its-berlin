@@ -1,5 +1,53 @@
 import axios from './axios';
 
+// export async function getUpdatedPlaces() {
+//     console.log("getPlaces");
+//     console.log("berlin in action", berlin.default.results);
+//     const data = await axios.get('/updatedplaces');
+//     // console.log("data in getPlaces", data);
+//     // let newdata = data.data.success.rows;
+//     return {
+//         type: "GET_PLACES",
+//         places: berlin.default.results
+//     };
+// }
+
+export async function getPlaces(berlin) {
+    console.log("getPlaces");
+    console.log("berlin in action", berlin.default.results);
+    const data = await axios.get('/updatedplaces');
+    console.log("data in getPlaces", data);
+    // let newdata = data.data.success.rows;
+    return {
+        type: "GET_PLACES",
+        places: data.data.rows
+    };
+}
+
+export async function addPlacesList(id, buttonText, sender, placeId) {
+    return {
+        type: "ADD_LIST",
+        id: id,
+        buttonText: buttonText,
+        name: sender,
+        placeId: placeId
+    };
+}
+
+
+export async function removePlacesList(id, button, sender, placeId) {
+    console.log("remove btn!!");
+    const data = await axios.post('/changePlaceStatus',{id, name, placeId, button});
+    console.log("placeId in actions", id);
+    console.log("data from removePlace", data);
+    console.log("rm from placelist ", id, name, placeId, button);
+    return {
+        type: "REMOVE_LIST",
+        id
+    };
+}
+
+
 export async function getFourSquare (endPoint, parameters) {
     // console.log("getFourSquare", endPoint, parameters);
     try {
@@ -47,9 +95,8 @@ export async function getHereApi () {
 export async function getGooglePlacesApi () {
     console.log("getGooglePlacesApi");
     try {
-        let data = await axios.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.520008,13.404954&radius=5000&type=topsights&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU");
+        let data = await axios.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.520008,13.404954&language=en&radius=5000&type=museum&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU");
         console.log("google data", data);
-        // let googleApiData = data;
         return {
             type: "GET_GOOGLE_PLACES_API",
             postgoogle: data
@@ -58,6 +105,7 @@ export async function getGooglePlacesApi () {
         console.log("err in actions googleApi", err);
     }
 }
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.520008,13.404954&radius=5000&input=topsights&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU
 
 // https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Germany&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU
 //

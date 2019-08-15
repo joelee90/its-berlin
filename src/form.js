@@ -32,6 +32,7 @@ export default function Form () {
                     <input className="input" type="email" name="email" placeholder="email" onChange = { handleChange } value={values.email || ''}required />
                     <input className="input" type="text" name="phonenumber" placeholder="phonenumber" onChange = { handleChange } value={values.phonenumber || ''} required />
                     <input className="input" type="password" name="password" placeholder="password"  onChange = { handleChange } value={values.password || ''} required />
+                    <br/>
                     <button className="button" type="submit">Submit</button>
                 </form>
             </div>

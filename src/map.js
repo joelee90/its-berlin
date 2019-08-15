@@ -3,43 +3,24 @@ import axios from './axios';
 import { Route, BrowserRouter, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps";
-import Location from './location';
 import mapStyles from './mapStyles';
-import Hereapi from './hereapi';
+// import Hereapi from './hereapi';
+// import Location from './location';
 import StampButton from './stampButton';
 import SelectedPlaces from './selectedplaces';
-import GoogleApi from './google';
+// import GoogleApi from './google';
+import * as Berlin from './places.json';
+import { getPlaces, addPlacesList, removePlacesList } from './actions';
+//list of place the user clicked and use that as a list
 
-// useEffect(() => {
-//     try {
-//         const data = axios.post('/saveFourApi');
-//         console.log('list from when map renders', data);
-//     } catch (err) {
-//         console.log("err", err);
-//     }
-//
-// }, []);
-//trying to save the place_id in the db once.
+console.log("Berlin", Berlin.default.results);
+// let berlinlist = Berlin.default.results;
+// val.forEach(i => console.log("i", i.name));
+//to get the id of the places
 
 function Map () {
 
     const [ selectedPlace, setSelectedPlace ] = useState(null);
-    const [ selectedPlaceHere, setSelectedPlaceHere ] = useState(null);
-
-    let list = useSelector(
-        state => state && state.post
-    );
-    console.log("list", list);
-
-    let apiList = useSelector(
-        state => state && state.posthere
-    );
-    // console.log("apiList", apiList);
-
-    // let googleList = useSelector(
-    //     state => state && state.postgoogle
-    // );
-    // console.log("googleList", googleList);
 
     return (
         <div>
@@ -48,28 +29,12 @@ function Map () {
                 defaultZoom = { 12 }
                 defaultCenter = {{ lat: 52.520008, lng: 13.404954 }}>
                 {
-                    list&&list.map(val => (
-                        <Marker
-                            key={val.venue.id}
-                            position = {{ lat: val.venue.location.lat, lng: val.venue.location.lng}}
-                            onClick = {() => {
-                                setSelectedPlace(val);
-                                setSelectedPlaceHere(null);
-                            }}
-                            icon={{
-                                url: "/images/berlin.png",
-                                scaledSize: new window.google.maps.Size(40, 40)
-                            }}
-                        /> ))
-                }
-                {
-                    apiList&&apiList.map(val => (
+                    Berlin.results.map(val => (
                         <Marker
                             key={val.id}
-                            position = {{ lat: val.position[0], lng: val.position[1]}}
+                            position = {{ lat: val.geometry.location.lat, lng: val.geometry.location.lng}}
                             onClick = {() => {
-                                setSelectedPlaceHere(val);
-                                setSelectedPlace(null);
+                                setSelectedPlace(val);
                             }}
                             icon={{
                                 url: "/images/berlin.png",
@@ -77,43 +42,20 @@ function Map () {
                             }}
                         /> ))
                 }
-
                 {
                     selectedPlace && (
                         <InfoWindow
-
-                            position = {{ lat: selectedPlace.venue.location.lat, lng: selectedPlace.venue.location.lng}}
+                            position = {{ lat: selectedPlace.geometry.location.lat, lng: selectedPlace.geometry.location.lng}}
                             onCloseClick = {() => {
-                                setSelectedPlace(null);
-                                setSelectedPlaceHere(null);
-                            }}
-                        >
-                            <div>
-                                <h5>{selectedPlace.venue.name}</h5>
-                                <p>{selectedPlace.venue.location.address}</p>
-                            </div>
-                        </InfoWindow>
-                    )}
-
-                {
-                    selectedPlaceHere && (
-                        <InfoWindow
-
-                            position = {{ lat: selectedPlaceHere.position[0], lng: selectedPlaceHere.position[1]}}
-                            onCloseClick = {() => {
-                                setSelectedPlaceHere(null);
                                 setSelectedPlace(null);
                             }}
                         >
                             <div>
-                                <h5>{selectedPlaceHere.category.title}</h5>
-                                <p>{selectedPlaceHere.vicinity}</p>
+                                <h5>{selectedPlace.name}</h5>
+                                <p>{selectedPlace.vicinity}</p>
                             </div>
                         </InfoWindow>
                     )}
-                <Location/>
-                <Hereapi />
-                <GoogleApi/>
             </GoogleMap>
         </div>
     );
@@ -124,36 +66,60 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default function Mapapp () {
 
-    let list = useSelector(
-        state => state && state.post
+    //axios to get the list of places the user clicked
+
+    const dispatch = useDispatch();
+
+    useEffect(
+        () => {
+            dispatch(getPlaces(Berlin));
+        },[]
     );
 
-    useEffect(() => {
-        console.log("check relation status");
-        (async () => {
-            try {
-                // console.log("props in SelectedPlaces.id ", props.id);
-                const data = await axios.post('/visitedplaces', { id: 44 });
-                console.log('data in selectedplaces', data);
-            } catch(err) {
-                console.log("err in SelectedPlaces btn", err);
-            }
-        })();
-    }, []);
+    const currentPlaces = useSelector(
+        state => state.places && state.places
+            .filter(function(val) {
+                return val.accepted == false;
+            })
+    );
 
-    // let apiList = useSelector(
-    //     state => state && state.posthere
-    // );
+    // .filter(
+    //     val => val.rows.accepted == false
+    console.log("currentPlaces", currentPlaces);
 
-    // {
-    //     apiList&&apiList.map(val => (<p className="placesin" key={val.id}> {val.title}<StampButton id = {val.id}/></p>))
-    // }
+    async function submit(id, button, name) {
+
+        console.log("submit btn!!");
+        console.log(id, button, name);
+
+        // console.log("button submit", button);
+        // console.log("props.name in sbt name", props.name);
+        try {
+            const data = await axios.post('/changePlaceStatus', { name: name, id: id, button: button, } );
+            console.log("data", data);
+            dispatch(addPlacesList(id, data.data.buttonText, name));
+        } catch (err) {
+            console.log("err in submit btn", err);
+        }
+    }
+
+
     return (
         <div className="map-home-large">
             <div className="map-home">
                 <div className="places">
                     {
-                        list&&list.map(val => (<div className="placesin" key={val.venue.id}> {val.venue.name}<StampButton id = {val.venue.id}/></div>))
+                        Berlin.results.map(
+                            val => (
+                                <div className="placesin" key={val.id}>
+                                    {val.name}
+                                    <StampButton
+                                        place_id = {val.id}
+                                        name ={val.name}
+                                        buttonText = {"ADD"}
+                                        submit = {submit}
+                                    />
+                                </div>))
                     }
                 </div>
                 <div style = {{ width: '60vw', height: '60vh' }}>
@@ -168,10 +134,34 @@ export default function Mapapp () {
             </div>
             <div className="selected-places">
                 {
-                    list&&list.map(val => <SelectedPlaces key={val.venue.id} id = {val.venue.id}/>)
+                    currentPlaces&&currentPlaces.map(
+                        val => (
+                            <div className="placesin" key={val.id}>
+                                {val.place_name}
+                                <StampButton
+                                    id = {val.id}
+                                    name = {val.place_name}
+                                    place_id = {val.place_id}
+                                    buttonText = {"DELETE"}
+                                    submit={()=> dispatch(removePlacesList(val.place_id, 'DELETE', val.place_name))}/>
+                            </div>))
                 }
             </div>
-        </div>
 
+        </div>
     );
 }
+
+
+
+// <GoogleApi/>
+
+
+
+// {
+//     list&&list.map(val => (<div className="placesin" key={val.venue.id}> {val.venue.name}<StampButton id = {val.venue.id}/></div>))
+// }
+//
+// {
+//     list&&list.map(val => <SelectedPlaces key={val.venue.id} id = {val.venue.id}/>)
+// }

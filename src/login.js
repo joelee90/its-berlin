@@ -28,6 +28,7 @@ export default function Login () {
                     { error && <div className="error"> Ooops! Something went wrong! </div> }
                     <input className="input" type="email" name="email" placeholder="email" onChange = { handleChange } value={values.email || ''}required />
                     <input className="input" type="password" name="password" placeholder="password"  onChange = { handleChange } value={values.password || ''} required />
+                    < br/>
                     <button className="button" type="submit">Login</button>
                 </form>
             </div>
