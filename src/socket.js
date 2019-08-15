@@ -1,6 +1,6 @@
 import * as io from 'socket.io-client';
 import { chatMessages, newChatMessage, newWallPost, oldWallPost } from './actions';
-// console.log('yo');
+console.log('yo');
 
 export let socket;
 
@@ -38,15 +38,3 @@ export const init = store => {
         )
     );
 };
-
-// socket.on('newPlayer', () => console.log('New Player'));
-//
-// socket.on(
-//     'greeting',
-//     payload => {
-//         console.log(payload);
-//         socket.emit('nice', {
-//             chicken: 'funky'
-//         });
-//     }
-// );

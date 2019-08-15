@@ -7,6 +7,7 @@ if(process.env.DATABASE_URL) {
     db = spicedPg('postgres:postgres:postgres@localhost:5432/itsberlin');
 }
 
+//registration
 exports.addNewUser = function addNewUser(firstname, lastname, email, phonenumber, password) {
     return db.query(
         `INSERT INTO users (firstname, lastname, email, phonenumber, password) VALUES ($1, $2, $3, $4, $5) RETURNING id`,
@@ -14,42 +15,29 @@ exports.addNewUser = function addNewUser(firstname, lastname, email, phonenumber
     );
 };
 
-// exports.addUserIdIntoPlaceId = function addUserIdIntoPlaceId(id) {
-//     return db.query(
-//         `INSERT INTO places (sender_id)`,
-//         [id]
-//     );
-// };
-// let regiPlaces = await db.addUserIdIntoPlaceId(req.session.userId);
-
+//login
 exports.checkEmail = function checkEmail(email) {
     return db.query(
         `SELECT * FROM users WHERE email = $1 `, [email]
     );
 };
 
+//list of all places
 exports.showButtonText = function showButtonText(id) {
     return db.query (
         `SELECT * FROM places WHERE place_id = $1`, [id]
     );
 };
 
+//update bio - not functioning
 exports.updateBio = function updateBio(bio, id) {
     return db.query(
         `UPDATE users SET bio = $1 WHERE id = $2 RETURNING bio`,
         [bio, id]
     );
 };
-//old
-// exports.addPlace = function addPlace(sender_id, place_id) {
-//     console.log("addPlace sender_id", sender_id);
-//     console.log("addPlace sender_id", place_id);
-//     return db.query (
-//         `UPDATE places SET sender_id = $1 WHERE place_id = $2 RETURNING sender_id`,
-//         [sender_id, place_id]
-//     );
-// };
-//new
+
+//adding place to users
 exports.addPlace = function addPlace(sender_id, place_name, place_id) {
     console.log("addPlace sender_id", sender_id);
     console.log("addPlace sender_id", place_name);
@@ -60,7 +48,7 @@ exports.addPlace = function addPlace(sender_id, place_name, place_id) {
     );
 };
 
-//new
+//removing place to users
 exports.removePlace = function removePlace(sender_id, place_name, place_id) {
     console.log("removePlace sender_id", sender_id);
     console.log("addPlace sender_id", place_name);
@@ -70,15 +58,6 @@ exports.removePlace = function removePlace(sender_id, place_name, place_id) {
         [sender_id, place_id]
     );
 };
-//old
-// exports.removePlace = function removePlace(place_id) {
-//     console.log("removePlace place_id", place_id);
-//     return db.query (
-//         `
-//         UPDATE places SET sender_id = null WHERE place_id = $1 RETURNING sender_id`,
-//         [place_id]
-//     );
-// };
 
 //get list of updated places
 exports.getUpdatedPlaces = function getUpdatedPlaces(id) {
@@ -88,6 +67,7 @@ exports.getUpdatedPlaces = function getUpdatedPlaces(id) {
     );
 };
 
+//add users image
 exports.addUserImage = function addUserImage(url, id) {
     return db.query(
         `UPDATE users SET url = $1 WHERE id = $2 RETURNING url`,
@@ -95,7 +75,13 @@ exports.addUserImage = function addUserImage(url, id) {
     );
 };
 
+//get users' information
+exports.getUserById = function getUserById(id) {
+    return db.query (
+        `SELECT id, firstname, lastname, url, bio FROM users WHERE id=$1`, [id]);
+};
 
+//chat save message
 exports.saveMessages = function saveMessages(sender_id, message) {
     return db.query (
         `
@@ -104,47 +90,16 @@ exports.saveMessages = function saveMessages(sender_id, message) {
     );
 };
 
+//chat bring last messages
 exports.getLastTenMessages = function getLastTenMessages() {
     return db.query (
         `
-        SELECT chats.id, sender_id, chats.message, chats.created_at, information.firstname, information.lastname, information.url
+        SELECT chats.id, sender_id, chats.message, chats.created_at, users.firstname, users.lastname, users.url
         FROM chats
-        LEFT JOIN information
-        ON information.id = chats.sender_id
+        LEFT JOIN users
+        ON users.id = chats.sender_id
         ORDER BY chats.created_at DESC
-        LIMIT 10
+        LIMIT 20
         `
     );
 };
-
-// exports.savePlaceApi = function savePlaceApi(place_id) {
-//     return db.query(
-//         `INSERT INTO users (place_id) VALUES ($1)`,
-//         [place_id]
-//     );
-// };
-
-
-
-// exports.checkVisited = function checkVisited(sender_id, place_id) {
-//     return db.query (
-//         `
-//         INSERT INTO places (sender_id, place_id) VALUES ($1, $2) RETURNING id`,
-//         [sender_id, place_id]
-//     );
-// };
-
-// exports.changePlaceT = function changePlaceT(sender_id, place_id) {
-//     return db.query (
-//         `UPDATE users SET accepted=true WHERE (sender_id = $1 AND place_id = $2) RETURNING *`,
-//         [sender_id, place_id]
-//     );
-// };
-//
-//
-// exports.changePlaceF = function changePlaceF(sender_id, place_id) {
-//     return db.query (
-//         `UPDATE users SET accepted=false WHERE (sender_id = $1 AND place_id = $2) RETURNING *`,
-//         [sender_id, place_id]
-//     );
-// };

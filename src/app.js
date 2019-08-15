@@ -10,6 +10,7 @@ import Profile from './profile';
 import Mapapp from './map';
 import Home from './home';
 import Chat from './chat';
+import Status from './status';
 
 export default function App () {
     return (

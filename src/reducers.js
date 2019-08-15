@@ -32,6 +32,23 @@ export default function(state = {}, action) {
         };
     }
 
+    if(action.type == 'CHAT_MESSAGES') {
+        // console.log("CHAT_MESSAGES");
+        state = {
+            ...state,
+            message: action.message
+        };
+    }
+
+    if(action.type == 'NEW_CHAT_MESSAGE') {
+        // console.log("NEW_CHAT_MESSAGE");
+        state = {
+            ...state,
+            message: [...state.message, action.message]
+        };
+    }
+
+
     if(action.type == 'GET_FOUR_SQUARE') {
         console.log("GET_FOUR_SQUARE");
         state = {

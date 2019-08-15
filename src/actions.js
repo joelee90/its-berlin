@@ -12,6 +12,23 @@ import axios from './axios';
 //     };
 // }
 
+export function chatMessages(data) {
+    // console.log("10 chatMessages", data);
+    return {
+        type: "CHAT_MESSAGES",
+        message: data
+    };
+}
+
+export function newChatMessage(data) {
+    // console.log("newChatMessage", data);
+    return {
+        type: "NEW_CHAT_MESSAGE",
+        message: data
+    };
+}
+
+
 export async function getPlaces(berlin) {
     console.log("getPlaces");
     console.log("berlin in action", berlin.default.results);

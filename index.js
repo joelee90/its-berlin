@@ -10,7 +10,9 @@ const path = require('path');
 const s3 = require('./s3');
 const csurf = require('csurf');
 const config = require('./config');
-// const moment = require("moment");
+const server = require('http').Server(app);
+const io = require('socket.io')(server, {origins: "localhost:8080"});
+const moment = require("moment");
 
 
 const diskStorage = multer.diskStorage({
@@ -38,6 +40,9 @@ const cookieSessionMiddleware = cookieSession({
 });
 
 app.use(cookieSessionMiddleware);
+io.use(function(socket, next) {
+    cookieSessionMiddleware(socket.request, socket.request.res, next);
+});
 
 if (process.env.NODE_ENV != 'production') {
     app.use(
@@ -52,11 +57,11 @@ if (process.env.NODE_ENV != 'production') {
 // -----------------------------------------------------------------------------
 
 app.get('/welcome', (req,res) => {
-    // if(req.session.userId) {
-    //     res.redirect('/');
-    // } else {
-    res.sendFile(__dirname + '/index.html');
-    // }
+    if(req.session.userId) {
+        res.redirect('/');
+    } else {
+        res.sendFile(__dirname + '/index.html');
+    }
 });
 
 
@@ -173,15 +178,15 @@ app.post('/changePlaceStatus', async (req, res) => {
     try {
         if(buttonStatus == 'ADD') {
             const addingPlace = await db.addPlace(sender, name, placeId);
-            console.log("addingPlace", addingPlace);
+            // console.log("addingPlace", addingPlace);
             res.json({
                 buttonText: "DELETE"
             });
         } if(buttonStatus == 'DELETE') {
             const rmvPlace = await db.removePlace(sender, name, placeId);
-            console.log("rmvPlace", rmvPlace);
-            console.log("sender", sender);
-            console.log("placeId", placeId);
+            // console.log("rmvPlace", rmvPlace);
+            // console.log("sender", sender);
+            // console.log("placeId", placeId);
             res.json({
                 buttonText: "ADD"
             });
@@ -192,29 +197,18 @@ app.post('/changePlaceStatus', async (req, res) => {
 });
 
 
-app.post('/visitedplaces', async (req, res) => {
-    // console.log('req.body', req.body);
-    try {
-        const senderId = req.session.userId;
-        // console.log("senderId in visitedPlaces", senderId);
-        const placeId = req.body.id;
-        // console.log("placeId visitedPlaces", placeId);
-    } catch (err) {
-        console.log("err in get checkVisited", err);
-    }
-});
-
 //get list of updated places
 app.get('/updatedplaces', async (req, res) => {
     try {
         const data = await db.getUpdatedPlaces(req.session.userId);
-        console.log("list from updatedplaces", data);
+        // console.log("list from updatedplaces", data);
         res.json(data);
     } catch(err) {
         console.log("err in updatedplaces", err);
     }
 });
 
+//getting google places
 // app.get("/searchinfo", function(req, res) {
 //     let url =
 //         "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.520008,13.404954&language=en&radius=5000&keyword=things%20to%20do%20in%20Berlin&rankby=prominence&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU";
@@ -222,48 +216,6 @@ app.get('/updatedplaces', async (req, res) => {
 //         res.json(data);
 //     });
 // });
-
-
-// io.on('connection', async function(socket) {
-//     console.log(`socket with the id ${socket.id} is now connected`);
-//     // onLineUsers[socket.id] = socket.request.session.userId;
-//     //online user, check that id is on the list once. then emit event about user appearance.
-//     let userId = socket.request.session.userId;
-//     console.log("userId connection", userId);
-//     let socketId = socket.id;
-//
-//     if (!userId) {
-//         return socket.disconnect(true);
-//     }
-//
-//     const latestMsg = await db.getLastTenMessages();
-//     // console.log("latestMsg", latestMsg.rows);
-//     latestMsg.rows.forEach(val => {
-//         val.created_at = moment(val.created_at, moment.ISO_8601).fromNow();
-//     });
-//     io.emit('chatMessages', latestMsg.rows.reverse());
-//
-//     socket.on('Send chat', async (data) => {
-//         let newMsg = await db.saveMessages(userId, data);
-//         let user = await db.getUserById(userId);
-//         // console.log("data from chat.js", data);
-//         // console.log("newMsg.rows", newMsg.rows);
-//         // console.log("user", user.rows);
-//         newMsg.rows[0].created_at = moment(
-//             newMsg.rows[0].created_at,
-//             moment.ISO_8601
-//         ).fromNow();
-//
-//         const result = {...newMsg.rows[0], ...user.rows[0]};
-//         // console.log("results", result);
-//         io.emit('newChatMessage', result);
-//     });
-//
-//     socket.on('disconnect', function() {
-//         console.log(`socket with the id ${socket.id} is now disconnected`);
-//     });
-// });
-
 
 app.get('*', function(req, res) {
     if(!req.session.userId) {
@@ -273,6 +225,47 @@ app.get('*', function(req, res) {
     }
 });
 
-app.listen(8080, function() {
+
+io.on('connection', async function(socket) {
+    console.log(`socket with the id ${socket.id} is now connected`);
+    // onLineUsers[socket.id] = socket.request.session.userId;
+    //online user, check that id is on the list once. then emit event about user appearance.
+    let userId = socket.request.session.userId;
+    console.log("userId connection", userId);
+    let socketId = socket.id;
+
+    if (!userId) {
+        return socket.disconnect(true);
+    }
+
+    const latestMsg = await db.getLastTenMessages();
+    // console.log("latestMsg", latestMsg.rows);
+    latestMsg.rows.forEach(val => {
+        val.created_at = moment(val.created_at, moment.ISO_8601).fromNow();
+    });
+    io.emit('chatMessages', latestMsg.rows.reverse());
+
+    socket.on('Send chat', async (data) => {
+        let newMsg = await db.saveMessages(userId, data);
+        let user = await db.getUserById(userId);
+        // console.log("data from chat.js", data);
+        // console.log("newMsg.rows", newMsg.rows);
+        // console.log("user", user.rows);
+        newMsg.rows[0].created_at = moment(
+            newMsg.rows[0].created_at,
+            moment.ISO_8601
+        ).fromNow();
+
+        const result = {...newMsg.rows[0], ...user.rows[0]};
+        // console.log("results", result);
+        io.emit('newChatMessage', result);
+    });
+
+    socket.on('disconnect', function() {
+        console.log(`socket with the id ${socket.id} is now disconnected`);
+    });
+});
+
+server.listen(8080, function() {
     console.log("What's Poppin 😎😎😎😎");
 });

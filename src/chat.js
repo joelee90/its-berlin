@@ -8,12 +8,7 @@ export default function Chat() {
     const chatMessages = useSelector(
         state => state && state.message
     );
-    // console.log("last 10 messages", chatMessages);
-
-    // const newMessage = useSelector(
-    //     state => state && state.message
-    // );
-    // console.log("newMessages", newMessage);
+    console.log("last 10 messages", chatMessages);
 
     const elemRef = useRef();
 
@@ -40,35 +35,29 @@ export default function Chat() {
 
     return (
         <div className = "chat-body">
-            <div className = "chat">
-                <div className="chat-container" ref = { elemRef } >
-                    {chatMessages && chatMessages.map(
-                        val => (
-                            <div className="chat-in" key={val.id}>
-                                <div className="chat-person">
-                                    <img src = {val.url}/>
-                                    {val.firstname}
-                                    < br/>
-                                    <span className="time">{val.created_at}</span>
-                                </div>
-                                <span className="chat-msg">{val.message}</span>
-                            </div>
-                        )
-                    )}
-                </div>
-                <textarea
-                    placeholder = "Add your message here"
-                    onKeyDown = { keyCheck }
-                    style ={{width: "40vw", height: "8vh"}}
-                    className = "textarea"
-                >
-                </textarea>
+            <img style ={{height: "15vh", width: "50vw"}} src = "/images/chat.jpg"/ >
+            < br/>
+            <div className="chat-container" ref = { elemRef } >
+                {chatMessages && chatMessages.map(
+                    val => (
+                        <div className="chat-in" key={val.id}>
+                            <img style ={{height: "30px"}} src = "/images/berlin.png"/ >
+                            {val.firstname} {""}
+                            <span className="chat-msg">{val.message}</span>
+                            < br/>
+                            <span className="time">{val.created_at}</span>
+                        </div>
+                    )
+                )}
             </div>
+            <textarea
+                placeholder = "Add your message here"
+                onKeyDown = { keyCheck }
+                style ={{width: "50vw", height: "15vh"}}
+                className = "textarea"
+            >
+            </textarea>
+
         </div>
     );
 }
-
-// <React.Fragment>
-// </React.Fragment>
-
-//ref - manually change the DOM,

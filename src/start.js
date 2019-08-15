@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Welcome from './welcome';
 import App from './app';
+import {init} from './socket';
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -17,6 +18,7 @@ if(location.pathname == '/welcome') {
     //loggedout
     elem = <Welcome />;
 } else {
+    init(store);
     //loggedin
     elem = (
         <Provider store = { store }>

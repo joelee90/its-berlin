@@ -13,7 +13,7 @@ export default function Form () {
             let regi = await axios.post('/form', { values });
             console.log("regi", regi);
             if(regi.data.registration) {
-                location.replace('/');
+                location.replace('/home');
             } else if (values == "") {
                 setError(true);
             }

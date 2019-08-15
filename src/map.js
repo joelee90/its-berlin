@@ -7,7 +7,6 @@ import mapStyles from './mapStyles';
 // import Hereapi from './hereapi';
 // import Location from './location';
 import StampButton from './stampButton';
-import SelectedPlaces from './selectedplaces';
 // import GoogleApi from './google';
 import * as Berlin from './places.json';
 import { getPlaces, addPlacesList, removePlacesList } from './actions';
@@ -88,10 +87,8 @@ export default function Mapapp () {
     console.log("currentPlaces", currentPlaces);
 
     async function submit(id, button, name) {
-
         console.log("submit btn!!");
         console.log(id, button, name);
-
         // console.log("button submit", button);
         // console.log("props.name in sbt name", props.name);
         try {
@@ -113,6 +110,7 @@ export default function Mapapp () {
                             val => (
                                 <div className="placesin" key={val.id}>
                                     {val.name}
+                                    <br/>
                                     <StampButton
                                         place_id = {val.id}
                                         name ={val.name}
@@ -136,8 +134,9 @@ export default function Mapapp () {
                 {
                     currentPlaces&&currentPlaces.map(
                         val => (
-                            <div className="placesin" key={val.id}>
+                            <div className="placesinn" key={val.id}>
                                 {val.place_name}
+                                <br/>
                                 <StampButton
                                     id = {val.id}
                                     name = {val.place_name}
@@ -152,12 +151,7 @@ export default function Mapapp () {
     );
 }
 
-
-
 // <GoogleApi/>
-
-
-
 // {
 //     list&&list.map(val => (<div className="placesin" key={val.venue.id}> {val.venue.name}<StampButton id = {val.venue.id}/></div>))
 // }

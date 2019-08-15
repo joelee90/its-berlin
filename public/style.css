@@ -13,12 +13,13 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: 20px 40px;
+    height: 3vh;
 }
 
 .navigation {
     display: flex;
     align-items: flex-end;
-    margin-left: 60%;
+    margin-left: 50%;
 }
 
 .navigation a {
@@ -41,7 +42,7 @@ body {
 .map-home {
     display: grid;
     grid-template-columns: 0.3fr 1fr;
-    margin-top: 2vh;
+    margin-top: 5vh;
     grid-row-start: 1;
 }
 
@@ -68,15 +69,17 @@ body {
 
 .selected-places {
     /* border: 1px solid black; */
-    height: 15vh;
+    height: 18vh;
     width: 80vw;
     margin-left: 15vh;
     margin-top: 1vh;
     overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
 }
 
 .placesin {
-    border: 0.5px solid #828282;
+    border: 0.5px solid #FFF0F5;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -86,6 +89,23 @@ body {
     background-color: lightgrey;
     margin: 10px;
     height: 10vh;
+}
+
+.placesinn {
+    border: 0.5px solid #FFF0F5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    background-color: #E9E9E9;
+    margin: 10px;
+    height: 13vh;
+    width: 15vw;
+    color: #404040;
 }
 
 .button {
@@ -121,6 +141,11 @@ body {
     display: grid;
     grid-template-rows: 0.1fr 1fr 0.1fr;
     justify-items: center;
+}
+
+.berlin-paragraph {
+    width: 50vw;
+    color: white;
 }
 
 /* registration */
@@ -176,39 +201,129 @@ body {
 }
 
 .profile-body {
+    /* border: 1px solid black; */
     display: grid;
     grid-template-rows: 1fr 1fr;
+    height: 80vh;
+    width: auto;
     justify-content: center;
     align-items: center;
     align-content: center;
+    background-color: #E9E9E9;
 }
 
 .profile-box {
-    display: flex;
-    flex-direction: rows;
-    border: 1px solid black;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* border: 1px solid black; */
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    width: 50vw;
+    height: 70vh;
+    width: 70vw;
     margin-top: 20px;
     margin-bottom: : 0;
+}
+
+.places-status {
+    border: 1px solid black;
+    height: 40vh;
+    width: 30vw;
 }
 
 .profile-img {
     border: 1px solid black;
     height: 20vh;
     width: 18vw;
-    margin: 20px;
-}
-
-.profile-status {
-    border: 1px solid black;
-    height: 40vh;
-    width: 20vw;
-    margin: 20px;
 }
 
 .textbox {
     margin: 0;
+}
+
+/* chat */
+.chat-body {
+    /* border: 1px solid black; */
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.chat-container {
+    /* border: 1px solid black; */
+    overflow-y: scroll;
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-in {
+    border: 0.5px solid #FFF0F5;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    width: 45vw;
+    height: 8vh;
+    margin: 2px;
+
+}
+
+.textarea{
+    border: 0.5px solid #FFF0F5;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin-top: 2vh;
+    font-size: 15px;
+}
+
+/* profile */
+.status-places {
+    display: flex;
+    flex-direction: rows;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.places-in-profile {
+    /* border: 1px solid black; */
+    width: 18vw;
+    height: 40vh;
+    margin: 5vw;
+    overflow-y: scroll;
+}
+/* title and the list in the profile */
+.listof {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.placesin-not-visited {
+    border: 0.5px solid #FFF0F5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color:#B6B0AD;
+    margin: 10px;
+    height: 10vh;
+}
+
+.home {
+    height: 100vh;
+    background: url("/images/homeback.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

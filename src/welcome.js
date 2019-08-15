@@ -7,7 +7,7 @@ export default function Welcome() {
     return (
         <div className="welcome">
             <h1>It's Berlin</h1>
-            <img style = {{ width: "300px" }} src = "/images/welcomeimg.jpg"/>
+            <img style = {{ width: "300px" }} src = "/images/homecenter.jpg"/>
             <HashRouter>
                 <div>
                     <Route exact path="/" component = { Form } />
