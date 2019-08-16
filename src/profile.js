@@ -1,49 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import axios from "./axios";
 import Status from './status';
 
-export default class Bioeditor extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            editing: false
-        };
-    }
+export default function Profile() {
 
-    componentDidMount() {
-        this.setState((state, props) => ({ newBio : props.bio }));
-    }
-    //user's original text is kept before making any changes.
 
-    handleChange(e) {
-        this.setState({
-            newBio : e.target.value
-        });
-    }
+    const [name, setName] = useState();
 
-    submit(e) {
-        e.preventDefault();
-        axios.post('/bio', {
-            bio: this.state.newBio
-        })
-            .then(({ data }) => {
-                this.setState({ editing : false });
-                this.props.setBio(data.bio);
-            })
-            .catch(err => {
-                console.log("err in add bio btn", err);
-            });
-    }
+    useEffect(() => {
+        console.log("profile rendering!");
+        (async () => {
+            const {data} = await axios.post('/checkusername');
+            console.log("data checkusername", data);
+            setName(data.data);
+        })();
 
-    render() {
-        return (
+
+    }),[];
+
+
+
+    return (
+        <div>
+            <div>
+                <h1>Welcome {name}</h1>
+            </div>
             <div className="profile-body">
                 <div className="profile-box">
                     <Status />
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 // {this.state.editing && (

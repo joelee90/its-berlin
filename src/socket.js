@@ -23,18 +23,4 @@ export const init = store => {
             newChatMessage(msg)
         )
     );
-
-    socket.on(
-        'newWallPost',
-        val => store.dispatch(
-            newWallPost(val)
-        )
-    );
-
-    socket.on(
-        'oldWallPost',
-        val => store.dispatch(
-            oldWallPost(val)
-        )
-    );
 };

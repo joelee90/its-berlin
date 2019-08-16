@@ -105,6 +105,7 @@ export default function Mapapp () {
         <div className="map-home-large">
             <div className="map-home">
                 <div className="places">
+                    <h3>Discover</h3>
                     {
                         Berlin.results.map(
                             val => (
@@ -131,6 +132,7 @@ export default function Mapapp () {
                 </div>
             </div>
             <div className="selected-places">
+                <h3>Visited</h3>
                 {
                     currentPlaces&&currentPlaces.map(
                         val => (

@@ -217,6 +217,17 @@ app.get('/updatedplaces', async (req, res) => {
 //     });
 // });
 
+app.post('/checkusername', async (req, res) => {
+    try {
+        let data = await db.getUserById(req.session.userId);
+        console.log("data in check", data);
+        res.json( {data: data.rows[0].firstname} );
+    } catch (err){
+        console.log("err in post profile", err);
+    }
+});
+
+
 app.get('*', function(req, res) {
     if(!req.session.userId) {
         res.redirect('/welcome');
