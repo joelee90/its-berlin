@@ -8,7 +8,6 @@ export default function Form () {
     const { values, handleChange, handleSubmit, error, setError } = useForm(registration);
 
     async function registration() {
-        // console.log("values", values);
         try {
             let regi = await axios.post('/form', { values });
             console.log("regi", regi);

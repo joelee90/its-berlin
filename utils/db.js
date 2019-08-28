@@ -29,14 +29,6 @@ exports.showButtonText = function showButtonText(id) {
     );
 };
 
-//update bio - not functioning
-exports.updateBio = function updateBio(bio, id) {
-    return db.query(
-        `UPDATE users SET bio = $1 WHERE id = $2 RETURNING bio`,
-        [bio, id]
-    );
-};
-
 //adding place to users
 exports.addPlace = function addPlace(sender_id, place_name, place_id) {
     console.log("addPlace sender_id", sender_id);
@@ -64,14 +56,6 @@ exports.getUpdatedPlaces = function getUpdatedPlaces(id) {
     return db.query (
         `SELECT * FROM relations WHERE sender_id = $1`,
         [id]
-    );
-};
-
-//add users image
-exports.addUserImage = function addUserImage(url, id) {
-    return db.query(
-        `UPDATE users SET url = $1 WHERE id = $2 RETURNING url`,
-        [ url, id ]
     );
 };
 

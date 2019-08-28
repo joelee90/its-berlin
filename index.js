@@ -54,7 +54,6 @@ if (process.env.NODE_ENV != 'production') {
 } else {
     app.use('/bundle.js', (req, res) => res.sendFile(`${__dirname}/bundle.js`));
 }
-// -----------------------------------------------------------------------------
 
 app.get('/welcome', (req,res) => {
     if(req.session.userId) {
@@ -63,8 +62,6 @@ app.get('/welcome', (req,res) => {
         res.sendFile(__dirname + '/index.html');
     }
 });
-
-
 
 //Logout
 app.get('/logout', (req, res) => {
@@ -119,39 +116,10 @@ app.post('/login', async (req, res) => {
     }
 });
 
-//Profile
-app.post('/profile', async (req, res) => {
-    const userBio = req.body.bio;
-    // console.log("req.body.bio", req.body.bio);
-    try {
-        await db.updateBio(userBio, req.session.userId);
-        res.json({ userBio });
-    } catch (err) {
-        console.log("err in post profile", err);
-    }
-});
-
-//saving HereApi in db
-// app.post('/saveFourApi', async (req, res) => {
-//     try {
-//         await db.savePlaceApi(req.id);
-//     } catch (err){
-//         console.log("err", err);
-//     }
-// });
-
 //check visitied
 app.post('/checkVisited', async (req, res) => {
     try {
-        // console.log("req.body.button checkvisited", req.body.button);
-        // console.log("req.body checkvisited", req.body);
-        const placeId = req.body.id;
-        // console.log("placeId", placeId);
-        // console.log("req.body.name", req.body.name);
-        // console.log("req.body", req.body);
-        // console.log("req.body.button", req.body.button);
         const showButton = await db.showButtonText(req.body.id);
-        // console.log("showButton", showButton.rows);
         if(showButton.rows) {
             res.json({
                 buttonText: "Add"
@@ -168,25 +136,19 @@ app.post('/checkVisited', async (req, res) => {
 
 app.post('/changePlaceStatus', async (req, res) => {
     const sender = req.session.userId;
-    // console.log("sender", sender);
     const placeId = req.body.id;
-    // console.log("placeId", placeId);
     const buttonStatus = req.body.button;
-    // console.log("req.body.button changeplace" , req.body.button);
-    // console.log("req.body", req.body);
     const name = req.body.name;
     try {
         if(buttonStatus == 'ADD') {
             const addingPlace = await db.addPlace(sender, name, placeId);
-            // console.log("addingPlace", addingPlace);
+            console.log(addingPlace);
             res.json({
                 buttonText: "DELETE"
             });
         } if(buttonStatus == 'DELETE') {
             const rmvPlace = await db.removePlace(sender, name, placeId);
-            // console.log("rmvPlace", rmvPlace);
-            // console.log("sender", sender);
-            // console.log("placeId", placeId);
+            console.log(rmvPlace);
             res.json({
                 buttonText: "ADD"
             });
@@ -196,26 +158,15 @@ app.post('/changePlaceStatus', async (req, res) => {
     }
 });
 
-
 //get list of updated places
 app.get('/updatedplaces', async (req, res) => {
     try {
         const data = await db.getUpdatedPlaces(req.session.userId);
-        // console.log("list from updatedplaces", data);
         res.json(data);
     } catch(err) {
         console.log("err in updatedplaces", err);
     }
 });
-
-//getting google places
-// app.get("/searchinfo", function(req, res) {
-//     let url =
-//         "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.520008,13.404954&language=en&radius=5000&keyword=things%20to%20do%20in%20Berlin&rankby=prominence&key=AIzaSyC_1b_D0SpU6lX1j6NDkIf0iDsA9ZQujyU";
-//     app.get(url).then(({ data }) => {
-//         res.json(data);
-//     });
-// });
 
 app.post('/checkusername', async (req, res) => {
     try {
@@ -227,7 +178,6 @@ app.post('/checkusername', async (req, res) => {
     }
 });
 
-
 app.get('*', function(req, res) {
     if(!req.session.userId) {
         res.redirect('/welcome');
@@ -236,21 +186,16 @@ app.get('*', function(req, res) {
     }
 });
 
-
 io.on('connection', async function(socket) {
     console.log(`socket with the id ${socket.id} is now connected`);
-    // onLineUsers[socket.id] = socket.request.session.userId;
-    //online user, check that id is on the list once. then emit event about user appearance.
     let userId = socket.request.session.userId;
     console.log("userId connection", userId);
-    let socketId = socket.id;
 
     if (!userId) {
         return socket.disconnect(true);
     }
 
     const latestMsg = await db.getLastTenMessages();
-    // console.log("latestMsg", latestMsg.rows);
     latestMsg.rows.forEach(val => {
         val.created_at = moment(val.created_at, moment.ISO_8601).fromNow();
     });
@@ -259,16 +204,12 @@ io.on('connection', async function(socket) {
     socket.on('Send chat', async (data) => {
         let newMsg = await db.saveMessages(userId, data);
         let user = await db.getUserById(userId);
-        // console.log("data from chat.js", data);
-        // console.log("newMsg.rows", newMsg.rows);
-        // console.log("user", user.rows);
         newMsg.rows[0].created_at = moment(
             newMsg.rows[0].created_at,
             moment.ISO_8601
         ).fromNow();
 
         const result = {...newMsg.rows[0], ...user.rows[0]};
-        // console.log("results", result);
         io.emit('newChatMessage', result);
     });
 
@@ -278,5 +219,5 @@ io.on('connection', async function(socket) {
 });
 
 server.listen(8080, function() {
-    console.log("What's Poppin 😎😎😎😎");
+    console.log("Listening");
 });

@@ -4,18 +4,9 @@ import { Route, BrowserRouter, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps";
 import mapStyles from './mapStyles';
-// import Hereapi from './hereapi';
-// import Location from './location';
 import StampButton from './stampButton';
-// import GoogleApi from './google';
 import * as Berlin from './places.json';
 import { getPlaces, addPlacesList, removePlacesList } from './actions';
-//list of place the user clicked and use that as a list
-
-console.log("Berlin", Berlin.default.results);
-// let berlinlist = Berlin.default.results;
-// val.forEach(i => console.log("i", i.name));
-//to get the id of the places
 
 function Map () {
 
@@ -65,8 +56,6 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default function Mapapp () {
 
-    //axios to get the list of places the user clicked
-
     const dispatch = useDispatch();
 
     useEffect(
@@ -82,24 +71,14 @@ export default function Mapapp () {
             })
     );
 
-    // .filter(
-    //     val => val.rows.accepted == false
-    console.log("currentPlaces", currentPlaces);
-
     async function submit(id, button, name) {
-        console.log("submit btn!!");
-        console.log(id, button, name);
-        // console.log("button submit", button);
-        // console.log("props.name in sbt name", props.name);
         try {
             const data = await axios.post('/changePlaceStatus', { name: name, id: id, button: button, } );
-            console.log("data", data);
             dispatch(addPlacesList(id, data.data.buttonText, name));
         } catch (err) {
             console.log("err in submit btn", err);
         }
     }
-
 
     return (
         <div className="map-home-large">
@@ -152,12 +131,3 @@ export default function Mapapp () {
         </div>
     );
 }
-
-// <GoogleApi/>
-// {
-//     list&&list.map(val => (<div className="placesin" key={val.venue.id}> {val.venue.name}<StampButton id = {val.venue.id}/></div>))
-// }
-//
-// {
-//     list&&list.map(val => <SelectedPlaces key={val.venue.id} id = {val.venue.id}/>)
-// }

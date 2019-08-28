@@ -19,8 +19,9 @@ export const init = store => {
 
     socket.on(
         'newChatMessage',
-        msg => store.dispatch(
-            newChatMessage(msg)
-        )
+        msg =>
+            store.dispatch(
+                newChatMessage(msg)
+            )
     );
 };

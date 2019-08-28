@@ -14,15 +14,14 @@ export default function Status () {
             dispatch(getPlaces(Berlin));
         },[]
     );
-    //axios to get the list of places the user clicked
+
     const currentPlaces = useSelector(
         state => state.places && state.places
             .filter(function(val) {
                 return val.accepted == false;
             })
     );
-    console.log("currentPlaces in status", currentPlaces);
-
+    
     return (
         <div className="status-places">
             <div className="listof">

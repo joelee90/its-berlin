@@ -13,20 +13,11 @@ export default function Chat() {
     const elemRef = useRef();
 
     useEffect(() => {
-        // console.log("chat hooks mounted");
-        // console.log("elemRef", elemRef);
-        // console.log("scroll top: ", elemRef.current.scrollTop);
-        // console.log("scroll height: ", elemRef.current.scrollHeight);
-        // console.log("client height: ", elemRef.current.clientHeight);
         elemRef.current.scrollTop = elemRef.current.scrollHeight - elemRef.current.clientHeight;
     }, [chatMessages]);
-    //auto scroll down when page loads.
 
     const keyCheck = (e) => {
-        // console.log("e.target.val", e.target.value);
-        // console.log("e.key", e.key);
         if(e.key === "Enter") {
-            // console.log("Enter pressed!");
             e.preventDefault();
             socket.emit('Send chat', e.target.value);
             e.target.value = "";
