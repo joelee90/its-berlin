@@ -13,4 +13,5 @@ React | Redux | Hooks | Node.js | Express.js | PostgreSQL | Socket.IO
 Google Places API | snazzy maps |
 
 ![itsberlinmap](/itsberlin-map.gif)
+![itsberlinmap](/itsberlin-map-zoom.gif)
 ![itsberlinchat](/itsberlin-chat.gif)
